@@ -46,6 +46,7 @@
     function fillBg(selector, parentobj) {
         var windowHeight = $(window).height();
         var windowWidth = $(window).width();
+        console.log(windowWidth);
 
         $(selector, parentobj).each(function () {
             var imgHeight = $(this).attr("height");
