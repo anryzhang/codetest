@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+
+</head>
+<body id="J_body">
+<script type="text/javascript">
+    var items,
+        messages,
+        length,
+        i,
+        title;
+    messages =[{
+        state:'success',
+        message:'this one worked'
+    },{
+        state:'success',
+        message:'this one worked as well'
+    },{
+        state:'error',
+        message:'this one did not work'
+    }];
+    length = messages.length;
+    //编程时使用join而不是字符串连接来构建字符串
+    function inbox(msg){
+        items = [];
+        title = [];
+        for(i = 0; i< length;i++){
+            items[i] = msg[i].message;
+
+        }
+        return '<ul><li>'+  items.join('</li><li>') + '</li></ul>';
+
+    }
+    var htmls = document.createElement('div');
+    htmls.innerHTML = inbox(messages);
+    console.log(htmls);
+    document.getElementById('J_body').appendChild(htmls);
+</script>
+</body>
+</html>

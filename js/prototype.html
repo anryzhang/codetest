@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    function Jedi(){
+        console.log('new Jedi');
+    }
+    Jedi.prototype.fight = function fight(){
+        console.log('fighting');
+    };
+    Jedi.prototype.block = function block(){
+        console.log('blocking');
+    };
+
+    Jedi.prototype.jump = function(){
+        this.jumping = true;
+        return this;
+    };
+    Jedi.prototype.setHeight = function(height){
+        this.height = height;
+        console.log(this);
+        return this;
+    };
+    var luke = new Jedi();
+    luke.jump().setHeight(20);
+
+</script>
+</body>
+</html>
