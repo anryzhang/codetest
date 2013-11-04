@@ -1,0 +1,45 @@
+body,ul,li,p{
+    margin:0;
+    padding: 0;
+    list-style-type: none;
+}
+.hidden{
+    display: none;
+}
+.sound-box{
+    position: absolute;
+    z-index: -1;
+    top:-0px;
+    left:0;
+    width:0;
+    height: 0;
+    overflow: hidden;
+}
+.sound-list-box{
+    margin: 0 auto;
+    width: 990px;
+
+}
+.sound-list-box p{
+    cursor: pointer;
+    background: url("http://img04.taobaocdn.com/tps/i4/T1lTCYXuphXXcv9pc8-120-48.jpg") no-repeat 0 0 ;
+    display: block;
+    width: 120px;
+    height: 48px;
+    overflow: hidden;
+}
+
+.sound-list-box p.sound-play{
+
+    background: url("http://img01.taobaocdn.com/tps/i1/T1oGJeFXdgXXaZ8Xc8-120-48.gif") no-repeat 0 0;
+
+}
+.sound-time{
+    float: right;
+    display: block;
+    width: auto;
+    height: 18px;
+    margin-right: 20px;
+    margin-top: 15PX;
+    font: bold 18px/18px airal;
+}
