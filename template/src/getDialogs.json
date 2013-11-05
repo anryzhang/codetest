@@ -1,0 +1,100 @@
+{
+    "code": 200,
+    "data": {
+        "pubAccount": "cnpublictbseed96",
+        "nextEnd": 1363335983117,
+        "dialogs": [
+            {
+                "id": 6269100204367479000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupantorch18",
+                "fromNick": "torch18",
+                "createTime": 1366013608309,
+                "msgType": "text",
+                "content": "uuu"
+            },
+            {
+                "id": 6269100180614280000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupantinaxlpjz06",
+                "fromNick": "tinaxlpjz06",
+                "createTime": 1365651162025,
+                "msgType": "text",
+                "content": "Dh"
+            },
+            {
+                "id": 6269100129724088000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupanyuanyi005",
+                "fromNick": "yuanyi005",
+                "createTime": 1364874640290,
+                "msgType": "text",
+                "content": "内裤"
+            },
+            {
+                "id": 6269100125167632000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupanxiaozhi1111",
+                "fromNick": "xiaozhi1111",
+                "createTime": 1364805114224,
+                "msgType": "text",
+                "content": "hello"
+            },
+            {
+                "id": 6269100125054218000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupan旺信test08",
+                "fromNick": "旺信test08",
+                "createTime": 1364803319283,
+                "msgType": "text",
+                "content": "pg"
+            },
+            {
+                "id": 6269100102577308000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupan一聊003",
+                "fromNick": "一聊003",
+                "createTime": 1364460415584,
+                "msgType": "text",
+                "content": "1988"
+            },
+            {
+                "id": 6269100096139641000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupan旺信003",
+                "fromNick": "旺信003",
+                "createTime": 1364362181550,
+                "msgType": "text",
+                "content": "346"
+            },
+            {
+                "id": 6269100056631508000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupanyuanyi008",
+                "fromNick": "yuanyi008",
+                "createTime": 1363759333840,
+                "msgType": "text",
+                "content": "Hello2BizUser"
+            },
+            {
+                "id": 6269100051433144000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupan一聊012",
+                "fromNick": "一聊012",
+                "createTime": 1363680016590,
+                "msgType": "text",
+                "content": "ff"
+            },
+            {
+                "id": 6269100029040935000,
+                "toId": "cnpublictbseed96",
+                "fromId": "cnhhupan一聊015",
+                "fromNick": "一聊015",
+                "createTime": 1363338337224,
+                "msgType": "text",
+                "content": "Hello2BizUser"
+            }
+        ]
+    },
+    "msg": ""
+}

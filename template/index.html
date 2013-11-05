@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+    <link rel="stylesheet" type="text/css" href="src/main.css" media="all"/>
+    <script type="text/javascript" src="src/main.js"></script>
+</head>
+<body>
+<ul class="msg-list" id="J_msgList"></ul>
+<script type="text/javascript" id="J_msgListTemp">
+    {{^each dialogs as d}}
+        <li>
+            <a href="{{d.href}}{{d.tbnick}}">
+                <div class="l msg-con clearfix">
+                <img src="http://jianghu.taobao.com/wangwang/headshow.htm?longId=cntaobao{{d.encodetbnick}}" class="avatar" alt="">
+                <div class="msg-info">
+                <h4>{{d.fromNick}}</h4>
+                <p>{{^if (d.msgType == "image")}}[图片]{{^else}}{{d.decodeContent}}{{/if}}</p>
+                </div>
+                </div>
+                <div class="l msg-time">{{d.time}}</div>
+            </a
+        </li>
+    {{/each}}
+</script>
+
+
+</body>
+</html>
