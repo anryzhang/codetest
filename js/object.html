@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    var tim = {
+        name:'tim',
+        age:28,
+        isPro:true,
+        likseJ:true
+    };
+    var jack = Object.create(tim);
+    jack.name = 'jj';
+    
+    console.log(jack.name,jack.age);
+</script>
+</body>
+</html>

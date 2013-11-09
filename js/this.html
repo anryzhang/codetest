@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+
+</head>
+<body>
+<script type="text/javascript">
+    var Lane = {
+        name: 'lena',
+        description:function(){
+            return this.name;
+        }
+    };
+    var description = Lane.description;
+    var Fred = {
+        description: Lane.description,
+        name: 'fred'
+    };
+
+    console.log(Lane.description());
+    console.log(Fred.description());
+    console.log(description());
+    console.log(description.call({
+        name: 'zed'
+    }));
+</script>
+</body>
+</html>
