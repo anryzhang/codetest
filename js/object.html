@@ -18,6 +18,17 @@
     jack.name = 'jj';
     
     console.log(jack.name,jack.age);
+
+    var o = Object.defineProperty({},'p',{
+        value:123,
+        name:'zr',
+        configurable:false
+    });
+
+    console.log(o.p);
+    delete o.p;
+    console.log(delete o.p);
+    console.log(o.p);
 </script>
 </body>
 </html>
