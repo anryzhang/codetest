@@ -1,0 +1,39 @@
+<?php global $marketId, $pageId, $spmId, $pageTitle, $cssLink, $jsLink; ?>
+<?php
+     /*
+      * assets配置
+      */
+     $timestamp = '20131015';
+     $cssExtra = '';
+     $jsExtra = '';
+     $kissy = 'kissy';
+     $version = '1.2.0';
+   ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title><?= $pageTitle ?></title>
+    <meta name="spm-id" content="<?= $spmId ?>">
+    <!-- assets引用 -->
+
+    <?php #include('/rgn/sites/global/assets.php'); ?>
+    <?php include('/home/admin/go/rgn/sites/global/assets.php'); ?>
+    <?= $cssLink ?>
+</head>
+<?php echo '<' . 'body' . '>'; ?>
+<!-- 引用全网吊顶 -->
+
+<?php #_tms_subArea('/rgn/sites/global/site_nav.php'); ?>
+<?php _tms_subArea('/home/admin/go/rgn/sites/global/site_nav.php'); ?>
+<script>
+    TB.Global.init();
+</script>
+
+<?php
+		#include_once('/home/admin/go/rgn/ww/temp-footer.php');
+		include_once('/home/admin/go/rgn/global/footer.php');
+		?>
+</body>
+</html>

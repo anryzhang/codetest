@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<style>
+    .test{
+        width: 300px;
+        height: 100px;
+        overflow: hidden;
+        border: 1px solid #cccc99;
+    }
+</style>
+<div class="test">
+
+</div>
+<script>
+    (function(S){
+        var $ = S.all, D = S.DOM, E = S.Event;
+        var h_obj = $('.test').height();
+        console.log(h_obj);
+    })(KISSY);
+</script>
+</body>
+</html>
