@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+</head>
+<body>
+<a href="#/posts/120">post 120</a>
+<a href="#/save/test.json">save</a>
+<a href="#/dashboard/graph">action view</a>
+<script>
+    (function($){
+        //router用来控制url.
+        //Backbone.Router会把连接中的#标签当做是url路径
+        var AppRouter = Backbone.Router.extend({
+            routes:{
+                "/posts/:id":"getPost",
+                "*actions":'defaultRoute'
+            },
+            getPost:function(id){
+              alert(id);
+            },
+            defaultRoute: function(actions){
+                alert(actions);
+            }
+        });
+
+        var appRouter = new AppRouter;
+        Backbone.history.start();
+
+    })(jQuery);
+
+</script>
+</body>
+</html>

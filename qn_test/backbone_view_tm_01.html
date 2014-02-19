@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+</head>
+<body>
+
+<div id="search_container"></div>
+
+<script id="search_template" type="text/template">
+    <label><%=search_label %></label>
+    <input type="text" id="search_input">
+    <input value="Search" id="search_button" type="button"/>
+
+</script>
+<script>
+    (function($){
+        //view 是用来显示model中的数据到页面的,同时它也可用来监听 DOM上的事件然后做出响应.
+       //对于实际应用来说，页面数据的变化需要同步到服务器端，最理想的方法，只是回传变化的数据
+       // 就ok，然后修改页面上对应的数据，而不是刷新页面。
+        SearchView = Backbone.View.extend({
+            initialize:function(){
+                //alert('init a searchView');
+                this.render('anry');
+            },
+            render:function(search_label){
+                //使用underscore这个库,来编译模板
+                var template = _.template($("#search_template").html(),{
+                    search_label:search_label
+
+                });
+                //加载模板到对应的el属性中
+                $(this.el).html(template);
+                console.log(this.el);
+            },
+            events:{//绑定事件
+                'click input[type=button]':'doChange'//定义类型为button的input标签的点击事件,触发doChange函数
+            },
+            doChange:function(event){
+                this.render('search for ' + $("#search_input").val());
+            }
+        });
+
+        var searchView = new SearchView({
+            el:$('#search_container')
+        });
+
+        searchView.render();
+        //这个reander的方法可以放到viewr的构造函数中
+
+    })(jQuery);
+
+</script>
+</body>
+</html>
