@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function ifNum(num){
+        if(typeof num == 'string'){
+            num = parseInt(num);
+            document.body.innerHTML = num;
+        }
+    }
+    ifNum("123str123");
+    function ifArr(arr){
+        if(typeof arr == 'string'){
+            arr = arr.split(",");
+
+        }
+        document.body.innerHTML = arr;
+    }
+    ifArr("str,ings");
+</script>
+</body>
+</html>
