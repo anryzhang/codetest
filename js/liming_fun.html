@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<script>
+    (function(){
+        function createEle(msg){
+            var ele = document.getElementById("J_c");
+            if(!ele){
+                ele = document.createElement("div");
+                ele.id = 'J_c';
+                ele.innerHTML = msg;
+                document.body.appendChild(ele);
+            }else{
+                ele.innerHTML = msg;
+            }
+        }
+
+
+        createEle("创建新内容")
+
+    })();
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+
+<body>
+<img src="http://gtms02.alicdn.com/tps/i2/T1sEJ0FAXrXXa7vCYl-190-80.png" alt=""/>
+<img src="http://gtms02.alicdn.com/tps/i2/T1sEJ0FAXrXXa7vCYl-190-80.png" alt=""/>
+<img src="http://gtms02.alicdn.com/tps/i2/T1sEJ0FAXrXXa7vCYl-190-80.png" alt=""/>
+<img src="http://gtms02.alicdn.com/tps/i2/T1sEJ0FAXrXXa7vCYl-190-80.png" alt=""/>
+<img src="http://gtms02.alicdn.com/tps/i2/T1sEJ0FAXrXXa7vCYl-190-80.png" alt=""/>
+<script>
+    window.onload = function(){
+        var imgs = document.getElementsByTagName('img');
+        for(var i = 0; i< imgs.length;i++){
+            var image = imgs[i];
+            if(image.addEventListener){
+                image.addEventListener('click',hide,false);
+            }else{
+                image.attachEvent('onclick',hide);
+            }
+        }
+        function hide(event){
+            console.log(event.target.style.opacity);
+            if(event.target.style.opacity == ''){
+                event.target.style.opacity = '0.5';
+            }else{
+
+                event.target.style.opacity = " ";
+            }
+        }
+    }
+</script>
+</body>
+</html>

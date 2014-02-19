@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<style>
+    .prent{
+        background: #008000;
+        padding:3px;
+        overflow: hidden;
+
+    }
+    .prent:after{
+        content: " ";
+        clear: both;
+        display: inline-block;
+        height: 0;
+    }
+    .children{
+        background: #a52a2a;
+        width: 30px;
+        height:30px;
+        margin: 0 3px 3px 0;
+        float: left;
+        overflow: hidden;
+
+    }
+    .children:hover{
+        background: yellow;
+
+    }
+    .box{
+        float: left;
+        width: 100px;
+        height: 100px;
+        background: red;
+        overflow: hidden;
+        margin-right: -30px;
+    }
+    .fl-box{
+        float: left;
+        width: 150px;
+        height: 150px;
+        background: #008000;
+        overflow: hidden;
+        /*margin-left:-30px;*/
+    }
+</style>
+<div class="prent" id="J_ele">
+    <div class="children"></div>
+    <div class="children"></div>
+    <div class="children"></div>
+    <div class="children"></div>
+    <div class="children"></div>
+</div>
+
+<div class="box"></div>
+<div class="fl-box"></div>
+</body>
+</html>
+<script>
+    var ele = document.getElementById('J_ele').children;
+    for(var i = 0; i< ele.length; i++){
+        console.log(ele[i].className);
+    }
+
+    console.log(ele.length);
+</script>

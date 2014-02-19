@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk">
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<style>
+    .hilite{
+        visibility: hidden;
+    }
+    div{
+        width: 100px;
+        height: 100px;
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+</style>
+<div id="J_ele"></div>
+<script>
+    function hide(ele,reflow){
+        if(reflow){
+            ele.style.display = 'none';
+        }else{
+            ele.style.visibility = 'hidden';
+        }
+    }
+
+    function  hightlight(e){
+        if(!e){
+            e.className = "hidden";
+        }else{
+            e.className += "hilite";
+        }
+    }
+
+    var ele_obj = document.getElementById('J_ele');
+//    hightlight(ele_obj);
+    hide(ele_obj,false);
+</script>
+
+</body>
+</html>

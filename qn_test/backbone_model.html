@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+</head>
+<body>
+<script>
+(function($){
+    Man = Backbone.Model.extend({
+        initialize:function(){
+            alert('hey, you create me!');
+        },
+        defaults:{//第一种赋值
+            name:'anry',
+            age:'27'
+        },
+        aboutMe:function(){
+            return 'my name is ' + this.get('name') + ', ' + this.get('age');
+        }
+    });
+    var man = new Man;
+    alert(man.get('name'));
+    alert(man.get('age'));
+
+    //第二种赋值
+   /* man.set({name:'thefire',age:'30'});
+    alert(man.get('age'));*/
+    alert(man.aboutMe());
+})(jQuery);
+
+</script>
+</body>
+</html>
