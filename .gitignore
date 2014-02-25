@@ -1,3 +1,5 @@
+#创建gitignore隱藏文件
+#touch  .gitignore
 #不推送的目录
 /runGrunt/node_modules/
 #必须推送的目录
