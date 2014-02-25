@@ -1,2 +1,4 @@
+#不推送的目录
 /runGrunt/node_modules/
+#必须推送的目录
 !build/
