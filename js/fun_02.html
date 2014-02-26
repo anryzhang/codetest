@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function createFunctions(){
+        var result = new Array();
+        for (var i=0; i < 10; i++){
+            result[i] = function(){
+                return i;
+            };
+        }
+        return result;
+    }
+    var val = createFunctions();
+    console.log(val);
+
+
+    function createFunctions1(){
+        var result = new Array();
+        for (var i=0; i < 10; i++){
+            result[i] = function(num){
+                return function(){
+                    return num;
+                };
+            }(i);
+        }
+        return result;
+    }
+    var val1 = createFunctions1();
+    console.log(val1);
+</script>
+</body>
+</html>

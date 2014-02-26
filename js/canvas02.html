@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<canvas id="drawing" width="200" height="200">
+    canvas
+</canvas>
+<script type="text/javascript">
+    var drawing = document.getElementById("drawing");
+    if(drawing.getContext){
+        var context = drawing.getContext("2d");
+        context.strokeStyle = "red";
+        //从(10,10)处开始绘制矩形，矩形的宽和高均为50 像素
+        context.fillRect(10,10,50,50);
+
+        context.strokeRect(60,60, 50,50);
+
+        //绘制半透明的蓝色矩形
+        context.fillStyle = "rgba(0,0,255,0.5)";
+        context.fillRect(30,30,50,50);
+        context.strokeRect(80,80,50,50);
+        //在两个矩形重叠的地方清除一个小矩形canvas02.html
+        context.clearRect(40,40,10,10);
+    }
+
+</script>
+</body>
+</html>

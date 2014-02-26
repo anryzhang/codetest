@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<canvas id="drawing" width="200" height="200">
+    canvas
+</canvas>
+<script type="text/javascript">
+    var drawing = document.getElementById("drawing");
+    if(drawing.getContext){
+        var context = drawing.getContext('2d');//取得绘图上下文
+
+        var imgURL = drawing.toDataURL('http://img01.taobaocdn.com/tps/i1/T1JWd6FeXaXXbOrogr-640-419.jpg');
+
+        var image = document.createElement('img');
+        image.src = imgURL;
+        console.log(image);
+        document.body.appendChild(image);
+    }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    (function($){
+        $.getJSON('test_ajax.json',
+                {
+                "title":"test"
+                }
+
+            ,function(data){
+            console.log(data.age);
+        });
+    })(jQuery)
+</script>
+</body>
+</html>

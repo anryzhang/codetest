@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="../../daily_test/jq-1.8.js"></script>
+
+    <script>
+
+
+            init:function(){
+                var self = this;
+                self._eventBring();
+                self.feachDate();
+                self.getQueryString('name');
+            },
+            _eventBring:function(){
+                var self = this;
+
+            },
+            feachDate:function(){
+                var self = this;
+                var contents = '';
+                console.log(self);
+                for(i in document){
+                    contents += i + '<br>';
+                }
+
+                $('.test').html(contents);
+            },
+            getQueryString: function  (a) {
+                var d = location.search.substring(1);
+                var b = new RegExp("(^|&|#)" + a + "=([^&|#]*)(&|#|$)");
+                var c = d.match(b);
+                return c != null ? unescape(c[2]) : "";
+            }
+
+
+        };
+
+        $(document).ready(function(){
+            moduleFun.init();
+        })
+
+
+    </script>
+</head>
+<body>
+<time></time>
+<datalist></datalist>
+<div class="test">
+    油瓶測試
+</div>
+</body>
+</html>

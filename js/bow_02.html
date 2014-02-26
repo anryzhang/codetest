@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title>间歇调用-超时调用</title>
+</head>
+<body>
+<script type="text/javascript">
+    //超时调用
+    var num = 0;
+    var max = 10;
+    function incrementNumber() {
+        num++;
+        console.log(num);
+       //如果执行次数未达到max 设定的值，则设置另一次超时调用
+        if (num < max) {
+            setTimeout(incrementNumber,500);
+        }else{
+            console.log("Done");
+        }
+    }
+    setTimeout(incrementNumber,500);
+</script>
+</body>
+</html>

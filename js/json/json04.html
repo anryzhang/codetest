@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    var book = {
+        "title": "Professional JavaScript",
+        "authors": [
+            "Nicholas C. Zakas",
+            "anry",
+            "coco"
+        ],
+        edition: 3,
+        year: 2011,
+        releaseDate:new Date()
+    };
+
+    var doc = document;
+    var valobj = JSON.stringify(book);
+
+    var bookcopy = JSON.parse(valobj,function(key,value){
+        if(key == "releaseDate"){
+            return new Date(value);
+        }else{
+            return value;
+        }
+    });
+
+    console.log(bookcopy);
+    console.log(bookcopy.releaseDate.getFullYear())
+</script>
+</body>
+</html>

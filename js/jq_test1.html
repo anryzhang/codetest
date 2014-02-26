@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+</head>
+<body>
+
+<script>
+    $(window).resize(function() {
+        var winW = "<div>窗口宽:" + $(window).width() + "px</div>" +
+
+                "<div>窗口高:" + $(window).height() + "px</div>";
+
+        $('body').prepend(winW);
+    });
+</script>
+
+</body>
+</html>

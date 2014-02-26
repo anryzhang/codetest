@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+
+<form action="" method="post" id="myForm">
+    <ul>
+        <li><input name="color" value="red" type="radio"/></li>
+        <li><input name="color" value="green" type="radio"/></li>
+        <li><input name="color" value="blue" type="radio"/></li>
+        <li><input name="color" value="blue" type="text"/></li>
+    </ul>
+</form>
+
+<script type="text/javascript">
+
+
+    var EventUtil = {
+        addHandler:function(element,type,handler){
+            if(element.addEventListener){
+                element.addEventListener(type,handler,false);
+            }else if(element.attachEvent){
+                element.attachEvent("on" + type,handler);
+            }else{
+                element["on"+type]= handler;
+            }
+        },
+        getEvent:function(event){
+            return event ? event : window.event;
+        },
+        getTarget:function(event){
+            return event.target || event.srcElement;
+        },
+        preventDefault:function(event){
+            if(event.preventDefault){
+                event.preventDefault();
+            }else{
+                event.returnValue = false;
+            }
+        },
+        removeHandler:function(element,type,handler){
+            if(element.removeEventListener){
+                element.removeEventListener(type,handler,false);
+            }else if(element.detachEvent){
+                element.detachEvent("on" + type,handler);
+            }else{
+                element["on" + type] = null;
+            }
+        },
+        stopPropagation:function(event){
+            if(event.stopPropagation){
+                event.stopPropagation();
+            }else{
+                event.cancelBubble = true;
+            }
+        }
+
+    };
+
+
+    function handler(event){
+        var events = EventUtul.getEvent(event);
+        var target = EventUtul.getTarget(events);
+        EventUtul.preventDefault(events);
+        switch (events.type){
+            case "click":
+                alert("click");
+                break;
+            case "mouseover":
+                target.style.backgroundColor = "green";
+                break;
+            case "mouseout":
+                target.style.backgroundColor = "";
+                break;
+        }
+    }
+
+    var form = document.getElementById("myForm");
+    var field = form.elements[3];
+    //field.disabled = true;
+    console.log(field.tabIndex);
+
+    EventUtil.addHandler(field,'focus',function(event){
+        event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event);
+        if(target.style.backgroundColor != "blue"){
+            target.style.backgroundColor = "blue";
+        }
+    });
+
+    EventUtil.addHandler(field,'blur',function(event){
+        event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event);
+        if(/[^\d]/.test(target.value)){ //不是数字
+            target.style.backgroundColor = "red";
+        }else{
+            target.style.backgroundColor = "";
+        }
+    });
+
+    EventUtil.addHandler(field,'change',function(event){
+        event = EventUtil.getEvent(event);
+        var target = EventUtil.getTarget(event);
+        if(/[^\d]/.test(target.value)){
+            target.style.backgroundColor = "green";
+        }else{
+            target.style.backgroundColor = "";
+        }
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+   // <!--命名空间-->
+    var myApp = {
+        name:'anry',
+        init:function(){
+            var self = this;
+
+            self.util.sayName();
+            self.Dom.getUtil();
+
+        },
+        util:{
+            sayName:function(){
+                var self = this;
+                console.log(myApp.name);
+            }
+        },
+        Dom:{
+            getUtil:function(){
+                myApp.util.sayName();
+            }
+        }
+    };
+
+    window.onload = function(){
+        myApp.init();
+    };
+
+    var count = 5,
+        collor = 6,
+        values = [1,2,3],
+        now = new Date(),
+        i = 0;
+
+   for( i ;i< values.length; i++){
+
+       var name = values[i];
+       console.log(name);
+   }
+
+
+</script>
+
+</body>
+</html>
