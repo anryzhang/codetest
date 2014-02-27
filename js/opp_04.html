@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    //构造函数模式,用于定义实例属性
+    function Person(name,age,job){
+        this.name = name;
+        this.age = age;
+        this.job = job;
+        this.friends = ["anry","coco"];
+    }
+    //原型模式:用于定义方法和共享的属性.
+    Person.prototype = {
+        constructor: Person,
+        sayName:function(){
+            alert(this.name);
+        }
+    };
+
+    //实例化对象
+    var person1 = new Person('nich',29,'soft');
+    var person2 = new Person('greg',27,'doctor');
+
+    person1.friends.push('van');
+    console.log(person1.friends);
+    console.log(person2.friends);
+    console.log(person1.friends === person2.friends);
+    console.log(person1.sayName === person2.sayName);
+
+
+</script>
+</body>
+</html>

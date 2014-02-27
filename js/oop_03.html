@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function createPerson(name,age,job){
+        var o = {
+            name:name,
+            age:age,
+            job:job,
+            sayName:function(){
+                alert(this.name);
+            }
+        };
+        return o;
+    }
+
+    var person1 = createPerson('anry',28,'doctor');
+    person1.sayName()
+</script>
+</body>
+</html>

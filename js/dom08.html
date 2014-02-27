@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<p id="p1"><b>Hello</b> world</p>
+<script type="text/javascript">
+    var p1 = document.getElementById("p1");
+    var helloNode = p1.firstChild.firstChild;
+    var worldNode = p1.lastChild;
+    var range = document.createRange();
+
+//    range.selectNode(helloNode);
+    range.setStart(helloNode,2);
+    range.setEnd(worldNode,3);
+
+    var span = document.createElement("span");
+    span.style.color = "red";
+    span.appendChild(document.createTextNode("测试"));
+    range.insertNode(span);
+
+
+</script>
+</body>
+</html>

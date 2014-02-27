@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+
+<style type="text/css">
+    $li > p {border:1px solid #ccc}
+</style>
+
+<ul>
+    <li>
+        <p>test</p>
+    </li>
+</ul>
+
+<script type="text/javascript">
+    function Prosone(name,age){
+        this.name = name;
+        this.age = age;
+        this.fireds = ['apple','orange'];
+    }
+
+    Prosone.prototype = {
+        content : "test",
+        sayName : function(){
+            console.log(this.name);
+        }
+    };
+
+    var prose1 = new Prosone('anry','26');
+    prose1.fireds.push('tests');
+    console.log(prose1.fireds);
+
+    var prose2 = new Prosone('coco','22');
+    console.log(prose2.fireds);
+
+    console.log(prose1.sayName() == prose2.sayName())
+
+</script>
+</body>
+</html>

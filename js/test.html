@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var color = "red";
+
+    function setColor(){
+        var anotherColor = "green";
+        function swapColor(){
+            var tempColor = anotherColor;
+            anotherColor = color;
+            color = tempColor;
+        }
+        swapColor();
+    }
+    setColor();
+</script>
+</body>
+</html>

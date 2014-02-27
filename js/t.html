@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk" />
+    <title>voip活动</title>
+    <meta charset="gbk">
+    <link rel="stylesheet" href="http://a.tbcdn.cn/p/global/1.0/global-min.css">
+    <script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+    <script src="http://a.tbcdn.cn/p/global/1.0/global-min.js"></script>
+
+    <link rel="stylesheet" href="../../src/wx-voip/layout.css">
+    <link rel="stylesheet" type="text/css" href="../../src/wx-voip/footer.css"/>
+    <script type="text/javascript" src="../../src/wx-voip/a_voip-date.js"></script>
+    <script type="text/javascript" src="../../src/wx-voip/b_getLayer.js"></script>
+
+    <!--ie6 start-->
+    <script type="text/javascript" src="../../src/wx-voip-ie6/voip-ie6.js"></script>
+    <!--ie6 end-->
+
+    <!-- global 3.1 -->
+    <div id="site-nav"><div id="site-nav-bd">
+        <p class="sitenav-mobile"><a href="http://www.taobao.com/m?TBG=146112.176505.4&spm=1.146112.176505.4">手机版</a></p>
+        <p class="login-info">
+            <script>TB.Global.writeLoginInfo();</script>
+        </p>
+        <ul class="quick-menu">
+            <li class="home"><a href="http://www.taobao.com/">淘宝网首页</a></li>
+            <style>
+                #site-nav .quick-menu li.sale1212 {
+                    margin-top: 3px;
+                    *margin-top: 1px;
+                    background: none;
+                    position:absolute;
+                    left:-70px;
+
+                }
+            </style>
+
+            <li class="menu-item">
+                <div class="menu">
+                    <a class="menu-hd" style="width:36px;" href="http://guang.taobao.com" target="_top" rel="nofollow">我要逛<b></b></a>
+                    <div class="menu-bd" style="width:68px;height:94px;line-height:1.7;">
+                        <div class="menu-bd-panel" style="padding:8px 10px;">
+                            <div>
+                                <a href="http://dongtai.taobao.com/hub/new_arrival.htm?scm=1046.1.7.1" target="_top" rel="nofollow">逛上新</a>
+                                <a href="http://dongtai.taobao.com/hub/promotion.htm?scm=1046.1.8.1" target="_top" rel="nofollow">逛优惠</a><br />
+                                <a href="http://www.taobao.com/go/act/sns/taoban_download1.php?tracelog=tbshouye" target="_top" rel="nofollow">用手机逛</a>
+                                <a href="http://list.taobao.com/browse/cat-0.htm?taobao_from=6" target="_top" rel="nofollow">商品分类</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="mytaobao menu-item">
+                <div class="menu">
+                    <a class="menu-hd" href="http://i.taobao.com/my_taobao.htm" target="_top" rel="nofollow">我的淘宝<b></b></a>
+                    <div class="menu-bd" style="height: 75px;width:100px">
+                        <div class="menu-bd-panel" id="myTaobaoPanel">
+                            <div >
+                                <a href="http://trade.taobao.com/trade/itemlist/list_bought_items.htm" target="_top" rel="nofollow">已买到的宝贝</a>
+                            </div>
+                            <div >
+                                <a href="http://dongtai.taobao.com/index.htm?scm=1046.1.1.1" target="_top" rel="nofollow">店铺动态</a>
+                            </div>
+                            <div >
+                                <a href="http://i.taobao.com/feed/friend_feed.htm?tracelog=taobaoindexrsidenewfeed" target="_top" rel="nofollow">好友动态</a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <style>
+                #site-nav .seller-center .menu-hd{ width:48px;}
+                #site-nav .seller-center .menu-bd{ width: 94px; line-height:1.7;}
+                #site-nav .seller-center .menu-bd-panel{padding: 8px 10px;}
+            </style>
+            <li class="seller-center menu-item">
+                <div class="menu">
+                    <a class="menu-hd" href="http://mai.taobao.com/seller_admin.htm" target="_top" rel="nofollow">卖家中心<b></b></a>
+                    <div class="menu-bd">
+                        <div class="menu-bd-panel">
+                            <div>
+                                <a href="http://trade.taobao.com/trade/itemlist/list_sold_items.htm" target="_top" rel="nofollow">已卖出的宝贝</a>
+                                <a href="http://sell.taobao.com/auction/goods/goods_on_sale.htm" target="_top" rel="nofollow">出售中的宝贝</a>
+                                <a href="http://fuwu.taobao.com/?tracelog=tbdd" target="_top" rel="nofollow">卖家服务市场</a>
+                                <a href="http://learn.taobao.com/user/xueyuanRedirect.htm?target=http://www.alibado.com" target="_top" rel="nofollow">卖家培训中心</a>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="service">
+                <a href="http://service.taobao.com/support/main/service_center.htm" target="_top" rel="nofollow">联系客服</a>
+            </li>
+            <li class="cart">
+                <a href="http://cart.taobao.com/my_cart.htm" target="_top" rel="nofollow">
+                    <s>
+                    </s>购物车
+                </a>
+                <b class="leftline"></b>
+                <b class="rightline"></b>
+            </li>
+            <li class="favorite menu-item">
+                <div class="menu">
+                    <a class="menu-hd" style="width:36px;" href="http://ju.mmstat.com/?url=http://favorite.taobao.com/collect_list-1-.htm?ad_id=&am_id=&cm_id=&pm_id=1501036000a02c5c3739&scjjc=c1" target="_top" rel="nofollow">收藏夹<b></b></a>
+                    <div class="menu-bd" style="width:82px;height:73px;line-height:1.7;">
+                        <div class="menu-bd-panel" style="padding:8px 10px;">
+                            <div>
+                                <a href="http://favorite.taobao.com/collect_list.htm?itemtype=1" target="_top" rel="nofollow">收藏的宝贝</a>
+                                <a href="http://favorite.taobao.com/collect_list.htm?itemtype=0" target="_top" rel="nofollow">收藏的店铺</a>
+                                <a href="http://favorite.taobao.com/hot_collect_list.htm?entrance=home" target="_top" rel="nofollow">热门收藏</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li class="services menu-item last">
+                <div id="J_Service" class="menu">
+                    <a class="menu-hd" href="http://www.taobao.com/sitemap.php?id=sitemap2" target="_top">网站导航<b></b></a>
+                    <div id="J_ServicesContainer" class="menu-bd" style="width:202px;width:210px\9;_width:202px;height:337px;"></div>
+                </div>
+            </li>
+        </ul>
+    </div></div>
+
+    <!-- system-announce -->
+    <!-- global 3.1 -->		<script>
+    // 吊顶初始化使用
+    TB.Global.init({mc:-1});
+</script>
+
+</head>
+<body><script type="text/javascript">
+    (function (d) {
+        var t=d.createElement("script");t.type="text/javascript";t.async=true;t.id="tb-beacon-aplus";
+        t.setAttribute("exparams","category=&userid=377227812&aplus");
+        t.src=("https:"==d.location.protocol?"https://s":"http://a")+".tbcdn.cn/s/aplus_v2.js";
+        d.getElementsByTagName("head")[0].appendChild(t);
+    })(document);
+</script>
+<!-- ie 6 start-->
+
+
+
+<div class="voip-bg-ie6">
+    <div class="voip-content-ie6">
+        <div class="voip-ie6-bg1">
+            <span id="J_num" class="voip-date" data-num='30000'></span>
+            <div class="voip-mao">
+                <img src="http://img02.taobaocdn.com/tps/i2/T1Y3SOXqdXXXcZ6JnJ-263-140.jpg">
+            </div>
+            <a href="javascript:void(0);" class="voip_down_layer top-downico"></a>
+            <a href="#J_down_ie6" class="voip-updown"></a>
+        </div>
+        <div class="voip-ie6-bg2" id="J_down_ie6"></div>
+        <div class="voip-ie6-bg3"></div>
+        <div class="voip-ie6-bg4"></div>
+        <div class="voip-ie6-bg5"></div>
+        <div class="voip-ie6-bg6">
+            <div class="voip-ie6-acttime">
+                <img src="http://img04.taobaocdn.com/tps/i4/T1_YSJXCXXXXbdz1T.-520-60.jpg">
+            </div>
+            <div class="voip-ie6-actinfo">
+                <img src="http://img01.taobaocdn.com/tps/i1/T1EyWFXz0hXXaDYqjV-831-113.jpg">
+            </div>
+            <div class="voip_down_layer"></div>
+
+        </div>
+    </div>
+
+    <div class="voip-share-ie6" id="J_share_ie6">
+        <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+
+            <a class="bds_tsina">新浪微博</a>
+
+        </div>
+        <script type="text/javascript" id="bdshare_js" data="type=tools&amp;uid=0" ></script>
+        <script type="text/javascript" id="bdshell_js"></script>
+        <script type="text/javascript">
+            document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000);
+        </script>
+    </div>
+
+
+</div>
+<div class="voip-footer">
+    <div class="wx-footer">
+        <div id="etao-footer" style="border:none">
+            <div class="common-bottom-links">
+                <a target="_blank" href="http://www.etao.com/whyetao.html">关于一淘</a>
+                <a target="_blank" href="http://www.etao.com/law.html">免责声明</a>
+                <a target="_blank" href="http://www.etao.com/go/act/phone/download.php?spm=0.0.0.316.UME8Pg">手机一淘</a>
+                <a target="_blank" href="http://ruyi.etao.com/">如意淘</a>
+                <a target="_blank" href="http://www.tao123.com/">淘网址</a>
+                <a target="_blank" href="http://8.etao.com/yitao/bar-658273-0-14-1-list.htm">意见反馈</a>
+                <a target="_blank" href="http://s.etao.com/help.php">帮助中心</a>
+                <a target="_blank" href="http://job.taobao.com/zhaopin/list.php?q=&amp;division=%E4%B8%80%E6%B7%98&amp;location=&amp;fc=&amp;sc=&amp;tc=&amp;type=&amp;page=1">诚聘英才</a>
+                <a target="_blank" class="last-link" href="http://open.etao.com/">商家入驻</a>
+            </div>
+            <div class="common-corp-links">
+                <a target="_blank" class="common-split" href="http://page.china.alibaba.com/shtml/about/ali_group1.shtml">阿里巴巴集团</a>
+                <span class="common-name">阿里巴巴网络：</span>
+                <a target="_blank" class="common-no-split" href="http://www.alibaba.com/">国际站</a>
+                <a target="_blank" class="common-no-split" href="http://china.alibaba.com/">中文站</a>
+                <a target="_blank" class="common-no-split" href="http://mai.aliexpress.com/">全球速卖通</a>
+                <a target="_blank" href="http://www.taobao.com/">淘宝网</a>
+                <a target="_blank" href="http://www.tmall.com/">天猫</a>
+                <a target="_blank" href="http://www.etao.com/">一淘</a>
+                <a target="_blank" href="http://ju.taobao.com/">聚划算</a>
+                <a target="_blank" href="http://www.aliyun.com/">阿里云</a>
+                <a target="_blank" href="http://cn.yahoo.com/">中国雅虎</a>
+                <a target="_blank" class="last-link" href="https://www.alipay.com/">支付宝</a>
+            </div><div class="etao-copyright">
+            Copyright &copy; 2010-2013&nbsp;ETAO.COM&nbsp;版权所有&nbsp;&nbsp;增值电信业务经营许可证：浙B2-20080204
+        </div>
+        </div>
+    </div>
+
+
+</div>
+
+<!-- ie 6 end -->
+
+<!--弹层-->
+<div class="voip-layer hidden" id="J_voip_layer">
+    <div class="voip-layer-bg"></div>
+    <div class="voip-layer-cont">
+        <div class="close_layer">关闭</div>
+
+        <div class="phone-num-box">
+            <div class="phone-num-info">
+                输入手机号<br>
+                通过免费短信获得下载地址
+            </div>
+            <form action="" class="J_from">
+                <div class="text-bg">
+                    <input class="J_phone_num" type="text" size="11" value="请输入手机号码">
+
+                </div>
+                <a class="phone-btn J_hjlj" href='javascript:void(0);' >确定</a>
+            </form>
+            <div class="tishi" id="J_ts">
+                <span class="ts-con">发送失败!</span>
+            </div>
+        </div>
+
+        <div class="down-ios-andr-box">
+            <a class="iphone-down J_hjlj" data-hj="ww.1.55.1.1.1" href="http://itunes.apple.com/cn/app/a-li-wang-wang/id420858151?spm=0.0.0.0.rwp3BD&amp;mt=8" target="_blank" ></a>
+            <a class="android-down J_hjlj" data-hj="ww.1.55.1.1.2" href="http://wangxin.taobao.com/download/android.php"></a>
+        </div>
+
+        <div class="layer-info">
+            <p>1  本次活动仅支持iPhone/Android平台的用户，其他平台暂不支持</p>
+            <p>2  Android系统低于2.2的用户，请将系统升级至2.3后参与此活动</p>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+
+<script src="http://zhushou.360.cn/script/360mobilemgrdownload.js"></script>

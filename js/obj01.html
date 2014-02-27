@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body id="J_wap" >
+<a href="www.etao.com" id="J_change">背景变色</a>
+<script type="text/javascript">
+    var moduleScript = {
+        b_clolr: true,
+        init:function(){
+            var self = this;
+
+            self.wap = self.getElem('J_wap');
+            self.bgChange = self.getElem("J_change");
+
+            self.eventBinding();
+        },
+        eventBinding:function(){
+            var self = this;
+
+            self.bgChange.onclick = function(){
+                console.log(self);
+
+                if(self.b_clolr){
+                    self.wap.style.background = "#ccc";
+                    self.b_clolr = false;
+                }else{
+                    self.wap.style.background= "";
+                    self.b_clolr = true;
+                }
+
+                return false;
+            }
+
+        },
+        getElem:function(elem){
+            return document.getElementById(elem);
+        }
+    };
+
+    window.onload = function(){
+        moduleScript.init()
+    };
+
+</script>
+</body>
+</html>

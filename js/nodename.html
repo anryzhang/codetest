@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<ul id="J_ul">
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">4</a></li>
+    <li><a href="">5</a></li>
+</ul>
+<script type="text/javascript">
+
+    function getNodeName(ID){
+        var J_node = document.getElementById(ID).childNodes;
+        var ele = null;
+        for(var i = 0; i< J_node.length; i++){
+            if(J_node[i].nodeName == '#text'){
+                continue;
+
+            }else{
+                ele = J_node[i].firstChild;
+                ele.onclick = function(){
+                    alert(this.innerHTML);
+                };
+
+            }
+        }
+    }
+
+    getNodeName('J_ul');
+
+    /*var J_node = document.getElementById('J_ul').childNodes;
+
+    var ele = null;
+    for(var i=0; i< J_node.length; i++){
+        if(J_node[i].nodeName == '#text'){
+            continue ;
+        }else{
+            ele = J_node[i].firstChild;
+            ele.onclick = function(){
+                alert(this.innerHTML);
+            };
+            console.log(ele);
+
+        }
+    }*/
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title>原型链继承</title>
+</head>
+<body>
+<script type="text/javascript">
+    function SuperType(){
+        this.property = true;
+        this.Super= "超级的";
+    }
+    SuperType.prototype.getSuperValue = function(){
+        return this.property + this.Super;
+
+    };
+    function SubType(){
+        this.subproperty = false;
+        this.Sub = "子级的";
+    }
+    //继承 SuperType
+    SubType.prototype = new SuperType();
+    SubType.prototype.getSubValue = function(){
+        return this.subproperty + this.Sub;
+    };
+    //重写超类型中的getSuperValue方法
+    SubType.prototype.getSuperValue = function(){
+        return false + "改变超级的值"
+    };
+
+    var instance = new SubType();
+    console.log(instance.getSuperValue());
+    //调用instance.getSuperValue()会经历三个搜索步骤：
+    // 1）搜索实例；
+    // 2）搜索SubType.prototype；
+    // 3）搜索SuperType.prototype，最后一步才会找到该方法。
+    console.log(instance.getSubValue());
+
+
+</script>
+</body>
+</html>

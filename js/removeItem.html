@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<ul id="J_ul">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<input type="button" id="J_btn" value="从后向前清除节点"/>
+<script type="text/javascript">
+    function removeItem(ID){
+        var list = document.getElementById(ID);
+
+        if(list.childNodes.length >0){
+            list.removeChild(list.lastChild);
+        }
+    }
+
+    document.getElementById('J_btn').onclick = function(){
+        removeItem('J_ul');
+    }
+</script>
+</body>
+</html>

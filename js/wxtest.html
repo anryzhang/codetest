@@ -1,0 +1,128 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>旺信首页</title>
+    <meta charset="gbk">
+    <link rel="stylesheet" href="http://a.tbcdn.cn/p/global/1.0/global-min.css">
+    <link rel="stylesheet" href="http://a.tbcdn.cn/apps/e/wwpc/130425/wx.css">
+    <script src="http://a.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+
+
+
+</head>
+
+
+<script src="http://a.tbcdn.cn/apps/softwarestore/common/base/config-min.js"></script>
+<script src="http://a.tbcdn.cn/apps/e/webww/120913/tool-clientCheck.js"></script>
+
+<body>
+
+
+<div class="address">
+    <div class="phone-num">
+        <h5>手机短信下载</h5>
+        <p class="intro">输入手机号，通过短信获得下载地址(短信免费)</p>
+        <div class="phone-num-box">
+            <form action="" class="J_form">
+                <div class="text-bg">
+                    <input class="J_phone_num" type="text" size="11" value="请输入手机号">
+                    <input style="display: none" type="text" size="11" value="">
+                </div>
+                <button data-hj="ww.1.53.1.1.14" class="phone-btn J_hjlj" type="submit" onclick="_gaq.push(['_trackEvent', 'WebDownload', 'DLphone','download']);" value="确定">确&nbsp;&nbsp;&nbsp;定</button>
+            </form>
+            <div class="tishi" id="J_ts">
+                <span class="jt-red"></span>
+                <span class="ts-con">发送失败！</span>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+//    document.domain = "taobao.com";
+    KISSY.Software.setPath();
+    KISSY.use('utils/download/index', function(S, DownLoad) {
+        new DownLoad();
+    });
+</script>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-39311237-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+
+<script type="text/javascript">
+    (function (S) {
+        var D = S.DOM, E = S.Event;
+        /****手机号码判断****/
+        var reg1 = /1[358]\d{9}/g,
+                btn = S.one('.phone-btn');
+        S.one('.J_phone_num').on('valuechange', function () {
+            S.one("#J_ts").hide();
+            var val = D.val(S.one('.J_phone_num'));
+            if (reg1.test(val) && val.length == 11) {
+                D.addClass(S.one('.phone-btn'), 'color-right');
+            } else {
+                D.removeClass(S.one('.phone-btn'), 'color-right');
+            }
+            //reg1.lastIndex = 0;
+        });
+
+        var val1 = D.val(S.one('.J_phone_num'));
+        S.one('.J_phone_num').on('focus', function () {
+            D.val(S.one('.J_phone_num'), '');
+            D.css(S.one('.J_phone_num'), 'color', '#333');
+        });
+
+        S.one('.J_phone_num').on('blur', function () {
+            // D.val(S.one('.J_phone_num'), '请输入手机号');
+            D.css(S.one('.J_phone_num'), 'color', '#acacac');
+        });
+
+
+        btn.on('click', function (it) {
+            it.preventDefault();
+            if (D.hasClass(btn, 'color-right')) {
+                var val = D.val(S.one('.J_phone_num')),
+                        url_m = "http://wxapi.taobao.com/common/sendDownloadSms.do?mobile=" + val;
+                S.getScript(url_m, function () {
+                    switch (errCode) {
+                        case 0:
+                            S.all('#J_ts .ts-con').html("发送成功!");
+                            break;
+                        case -20:
+                            S.all('#J_ts .ts-con').html("发送失败!");
+                            break;
+                        case -1:
+                            S.all('#J_ts .ts-con').html("手机号码非法!");
+                            break;
+                        case -10:
+                            S.all('#J_ts .ts-con').html("发送过于频繁!");
+                            break;
+                    }
+                    S.one("#J_ts").show();
+                });
+            } else {
+                return false;
+            }
+        });
+    })(KISSY)
+</script>
+
+<script src="http://zhushou.360.cn/script/360mobilemgrdownload.js"></script>
+</body>
+<html>

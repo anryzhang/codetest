@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function fact(num){
+        if(num <= 1){
+           return 1;
+        }else{
+            console.log(arguments.callee.length);
+            return num* arguments.callee(num-1);
+        }
+    }
+
+    var trueFact = fact;
+    console.log(trueFact(5));
+    console.log(fact(5));
+
+</script>
+</body>
+</html>
