@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+    function testArgument(){
+        var arg = arguments;
+
+        var sumValue = '';
+        //console.log(typeof arg)
+        console.log(arg instanceof Object);
+        console.log(arg[0])
+        for(var i=0; i< arg.length;i++){
+            sumValue = arg[i] + arg[i+1] ;
+        }
+        console.log(sumValue);
+
+
+    }
+    testArgument(4,3);
+</script>
+</body>
+</html>

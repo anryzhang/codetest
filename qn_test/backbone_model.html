@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+</head>
+<body>
+<script>
+(function($){
+    Man = Backbone.Model.extend({
+        initialize:function(){
+            alert('hey, you create me!');
+            //初始化时绑定监听
+            this.bind("change:name",function(){
+                var name = this.get("name");
+                alert("you change name is property: " + name);
+            });
+            //为对象添加验证规则,以及错误提示
+            this.bind('error',function(){
+                alert(error);
+            })
+        },
+        defaults:{//第一种赋值
+            name:'anry',
+            age:'27'
+        },
+        aboutMe:function(){
+            return 'my name is ' + this.get('name') + ', ' + this.get('age');
+        }
+    });
+    var man = new Man;
+    /*alert(man.get('name'));
+    alert(man.get('age'));*/
+    man.set({name:''});//根据验证规则,弹出错误提示
+
+    //第二种赋值
+    /*man.set({name:'thefire',age:'30'});
+    alert(man.get('age'));
+    alert(man.aboutMe());*/
+})(jQuery);
+
+</script>
+</body>
+</html>

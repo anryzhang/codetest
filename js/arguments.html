@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<script type="text/javascript">
+    function check(args){
+        var act = args.length;
+        var exp = args.callee.length;
+        if(act != exp){
+            console.log('错误:只有'+act+'个参数;必需要传'+ exp + '个参数!')
+        }
+
+    }
+    function f(x,y,z){
+        check(arguments);
+        console.log(x+y+z);
+    }
+    f(1,2)
+</script>
+<body>
+
+</body>
+</html>

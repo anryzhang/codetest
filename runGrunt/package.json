@@ -1,0 +1,23 @@
+{
+    "name":"runGrunt",
+    "version":"0.1.1",
+    "description":"xxx",
+    "main":"Gruntfile.js",
+    "devDependencies":{
+        "grunt":"0.x.x",
+        "grunt-contrib-jshint":"*",
+        "grunt-contrib-copy":"*",
+        "grunt-contrib-imagemin":"*",
+        "grunt-contrib-watch": "~0.5.1",
+        "grunt-contrib-less": "~0.6.4",
+        "grunt-contrib-concat": "~0.1.1",
+        "grunt-contrib-cssmin": "~0.5.0",
+        "grunt-contrib-uglify": "~0.2.4",
+        "grunt-contrib-coffee": "~0.7.0",
+        "grunt-contrib-requirejs": "~0.4.1",
+        "grunt-contrib-livereload": "~0.1.2",
+        "grunt-parseunicode": "~0.1.9"
+    },
+    "author":"zr",
+    "keywords":"123456"
+}

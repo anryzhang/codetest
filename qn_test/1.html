@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html manifest="http://h5.m.taobao.com/manifest/qn/pc/workbench/pluginSetting.manifest">
+<head>
+    <title></title>
+    <style filepath="http://g.tbcdn.cn/sj/qn-workbench/0.0.4/page/pluginSetting/base.css">/*
+    css reset
+*/
+    * {
+        border-color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    html {
+        font-family: sans-serif;
+        font-size: 12px;
+        -webkit-user-select: none;
+    }
+    img {
+        border: 0;
+    }
+    ul,
+    ol {
+        list-style: none;
+    }
+    ::-webkit-scrollbar {
+        height: 11px;
+        width: 4px;
+    }
+    ::-webkit-scrollbar-button {
+        height: 0;
+        width: 0;
+    }
+    ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+        display: block;
+    }
+    ::-webkit-scrollbar-button:vertical:start:increment,
+    ::-webkit-scrollbar-button:vertical:end:decrement {
+        display: none;
+    }
+    ::-webkit-scrollbar-track:vertical,
+    ::-webkit-scrollbar-track:horizontal,
+    ::-webkit-scrollbar-thumb:vertical,
+    ::-webkit-scrollbar-thumb:horizontal,
+    ::-webkit-scrollbar-track:vertical,
+    ::-webkit-scrollbar-track:horizontal,
+    ::-webkit-scrollbar-thumb:vertical,
+    ::-webkit-scrollbar-thumb:horizontal {
+        border-style: solid;
+        border-color: transparent;
+    }
+    ::-webkit-scrollbar-track:vertical::-webkit-scrollbar-track:horizontal {
+        background-clip: padding-box;
+        background-color: #48526b;
+    }
+    ::-webkit-scrollbar-thumb {
+        -webkit-box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.1), inset 0 -1px 0 rgba(0, 0, 0, 0.07);
+        background-clip: padding-box;
+        background-color: rgba(0, 0, 0, 0.15);
+        min-height: 28px;
+        padding-top: 100;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    ::-webkit-scrollbar-thumb:active {
+        -webkit-box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.35);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    ::-webkit-scrollbar-track:vertical,
+    ::-webkit-scrollbar-track:horizontal,
+    ::-webkit-scrollbar-thumb:vertical,
+    ::-webkit-scrollbar-thumb:horizontal {
+        border-width: 0;
+    }
+    ::-webkit-scrollbar-track:hover {
+        -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.1);
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    ::-webkit-scrollbar-track:active {
+        -webkit-box-shadow: inset 1px 0 0 rgba(0, 0, 0, 0.14), inset -1px -1px 0 rgba(0, 0, 0, 0.07);
+        background-color: rgba(0, 0, 0, 0.05);
+    }
+    ::-webkit-scrollbar-track-piece {
+        background: rgba(0, 0, 0, 0);
+    }
+    .main-nav {
+        padding: 5px 10px;
+        height: 50px;
+    }
+    .main-nav > ul > li {
+        float: left;
+        margin-right: 25px;
+        padding-top: 28px;
+        height: 20px;
+        width: 80px;
+        border: 1px solid #fff;
+        text-align: center;
+        cursor: pointer;
+    }
+    .main-nav > ul > li:hover,
+    .main-nav > ul > li.active {
+        border: 1px solid #fff;
+    }
+    .setting-body {
+        height: 273px;
+        width: 100%;
+    }
+    .setting-body .sub-nav {
+        float: left;
+        margin-left: -100%;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        width: 85px;
+        border-right: 2px solid #fff;
+    }
+    .setting-body .sub-nav > li {
+        height: 40px;
+        line-height: 40px;
+        white-space: nowrap;
+        text-align: center;
+        cursor: pointer;
+        overflow-x: hidden;
+        text-overflow: ellipsis;
+    }
+    .setting-body .sub-nav > li:hover,
+    .setting-body .sub-nav > li.active {
+        font-weight: bold;
+    }
+    .plugins {
+        float: left;
+        width: 100%;
+        height: 273px;
+    }
+    .plugins .plugins-body {
+        height: 273px;
+        margin-left: 85px;
+        padding-left: 14px;
+    }
+    .body-head {
+        position: relative;
+        height: 40px;
+        line-height: 40px;
+        font-size: 0px;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWwAAAABCAMAAADNXGS7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAKhQTFRF3+Xq8/X36+/y5eru+vv84Obr5Ont4+jt7/L04ufs6u7x8PP14efr4OXq+/z9+Pn69/n69Pb49ff55+vv9ff46O3w6e3w+Pr7/v7+7vH04ebr9vj58vT2+fr79/j57fDz6e3x7PDz5uvv+/v85Onu/Pz95uru+vv78fT25+zv8PL14+js/f3+/f7+7O/y8fP27fH06Ozw4efs8vX3/P397/L1////3+TqWHz3CAAAAHVJREFUeNrk0FUCgkAUAMC3vUt3dygoGGDc/2b+cQnnCAOfQ5Ksy2u0ekrL2Haq3AtchIpJv0iZ1u0Na00Uzn5HyMCFUMrIGDMBvv8GAEyWGZu6Cs4Hcur8Zxg1GsZt/UjlW78XO0Ju4OWVY8flmfbWMfwTYABkrEApNH+5OgAAAABJRU5ErkJggg==) center bottom no-repeat;
+    }
+    .body-head .checkbox {
+        font-size: 12px;
+    }
+    .body-head .checkbox .tip {
+        display: none;
+        position: absolute;
+        top: 25px;
+    }
+    .body-head .checkbox.active .tip {
+        display: block;
+    }
+    .plugin-window {
+        height: 233px;
+        padding-left: 20px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .plugin-window .plugin img {
+        margin: 8px;
+        border-radius: 3px;
+    }
+    .plugin-window .plugin p {
+        margin: 8px 0;
+    }
+    .btn {
+        padding: 4px 15px;
+        height: 20px;
+        line-height: 20px;
+        border: 1px solid #fff;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+    .opt-bar {
+        padding: 5px 10px;
+        height: 22px;
+        border-top: 1px solid #fff;
+        text-align: right;
+    }</style>
+    <link rel="stylesheet/less" href="http://g.tbcdn.cn/sj/qn-workbench/0.0.4/page/pluginSetting/theme.css?v=2079220932_1347"  charset="utf-8"/>
+</head>
+<body><script type="text/javascript">
+    with(document)with(body)with(insertBefore(createElement("script"),firstChild))setAttribute("exparams","req_url=http%3a%2f%2fh5%2em%2etaobao%2ecom%2fqn%2fpc%2fworkbench%2fpluginSetting%2ehtml&amp;category=&amp;userid=&amp;b2c_orid=&amp;b2c_auction=&amp;at_isb=&amp;atp_isdpp=&amp;at_ssid=&amp;bbid=&amp;aplus&amp;at_cart=&amp;at_udid=",id="tb-beacon-aplus",src=(location>"https"?"//s":"//a")+".tbcdn.cn/s/aplus_wap.js")
+</script>
+
+<div class="main-nav">
+    <ul class="J_mainNav">
+    </ul>
+</div>
+<div class="setting-body">
+    <div class="plugins ">
+        <div class="plugins-body J_plugins">
+        </div>
+    </div>
+    <ul class="sub-nav J_subNav"></ul>
+</div>
+<div class="opt-bar">
+    <span class=" btn btn-primary J_save">保 存</span>
+    <span class="btn J_cancle">取 消</span>
+</div>
+
+<script id="J_pluginsTmpl" type="text/template">
+    <div class="body-head">
+         <span class="checkbox J_checkbox">
+            <input type="checkbox" class="J_visible" <% if (visible == 1) {%> checked="checked" <% } %>/>
+            <div class="tip">
+                <img src="<%= noteImg %>" alt=""/>
+            </div>
+            在<%= title %>显示
+        </span>
+    </div>
+    <div class="plugin-window">
+        <p>选择默认插件</p>
+        <table class="plugin-list">
+            <% _.each(pluginList, function(elem){
+            if (!elem.hidden == 1) {
+            %>
+
+            <tr class="plugin">
+                <td>
+                    <input type="<% if (type == 0) { %>radio<% } else {%>checkbox<% } %>" name="plugin" class="J_plg" value="<%= elem.plugin_id %>" <% if (_.indexOf(def,elem.plugin_id + "") != -1) { %> checked="checked" <% } %> />
+                </td>
+                <td>
+                    <img src="<%= elem.icon_url %>_40x40.jpg" height="40" width="40"  alt=""/>
+                </td>
+                <td>
+                    <p><%= elem.name %></p>
+                    <p class="sp-nick"><%= elem.spNick %></p>
+                </td>
+            </tr>
+            <% }}) %>
+        </table>
+    </div>
+</script>
+
+<script type="text/javascript" src="http://g.tbcdn.cn/sj/qn/??jssdk.js,lib/js/jquery.js,lib/js/underscore.js,lib/js/scaleApp.js,lib/js/backbone.js,lib/js/less.js?v=329563748_234999"  charset="utf-8"></script>
+<script filepath="http://g.tbcdn.cn/sj/qn-workbench/0.0.4/page/pluginSetting/setting.js">/**
+ * Created by cangya.jyt on 14-1-12.
+ */
+QN.plgcenter = {
+    invoke: function(config) {
+        QN.invokeHelper('plgcenter', config);
+    }
+}
+
+var global = {
+    pluginsNote: "工具栏",
+    noteImg: "http://gtms04.alicdn.com/tps/i4/T1meCFFnXdXXbqkxMD-222-172.png",
+    pluginsMap: {},
+    settingsModel : {
+        mainNav :[{
+            title: "工具栏插件",
+            active: true,
+            mainCategory: "pc",
+            pluginNote: "工具栏",
+            icon: "http://gtms01.alicdn.com/tps/i1/T10m6xFhtiXXbSBwfc-30-30.png",
+            noteImg: "http://gtms03.alicdn.com/tps/i3/T1xo9UFaBcXXcP64ID-222-171.png"
+        },{
+            title: "桌面插件",
+            active: false,
+            mainCategory: "pcwidget",
+            pluginNote: "桌面",
+            noteImg: "http://gtms01.alicdn.com/tps/i1/T18w5VFlVdXXbIkbgB-221-171.png",
+            icon: "http://gtms01.alicdn.com/tps/i1/T1fazlFbRiXXbSBwfc-30-30.png"
+        },{
+            title: "旺旺插件",
+            active: false,
+            mainCategory: "pcww",
+            pluginNote: "旺旺右侧",
+            noteImg: "http://gtms04.alicdn.com/tps/i4/T1JX9UFe4fXXbIkbgB-221-171.png",
+            icon: "http://gtms01.alicdn.com/tps/i1/T1x63dFhXkXXbSBwfc-30-30.png"
+        }]
+    }
+};
+
+(function($){
+    function MainNavModule (sandbox) {
+        var MainNavView = Backbone.View.extend({
+            tagName : 'li',
+            events: {
+                "click": "changeMainNav"
+            },
+            changeMainNav: function() {
+                sandbox.emit("mainCategoryChange", this.model.mainCategory);
+            },
+            initialize: function(){
+                var self = this;
+                this.$el.html(this.model.title);
+                this.$el.css("background-image",'url(' + this.model.icon +')')
+                        .css("background-position", 'center 2px')
+                        .css("background-repeat", 'no-repeat');
+
+                if (this.model.active) {
+                    this.$el.addClass("active");
+                }
+
+                sandbox.on("mainCategoryChange", function(category){
+                    if (self.model.mainCategory == category) {
+                        self.$el.addClass('active');
+                        global.pluginsNote = self.model.pluginNote;
+                        global.noteImg = self.model.noteImg;
+                        sandbox.emit("mainCategoryChanged", self.model.mainCategory);
+                    } else {
+                        self.$el.removeClass('active')
+                    }
+
+                });
+            }
+        });
+
+        var MainNavListView = Backbone.View.extend({
+            el: $(".J_mainNav"),
+            initialize: function(){
+                this.render();
+            },
+            render: function(){
+                var self = this;
+                this.$el.html("");
+                _.each(this.model, function(e){
+                    self.$el.append((new MainNavView({model:e})).el);
+                });
+                return this;
+            }
+        });
+
+        return {
+            init: function() {
+                new MainNavListView({model:global.settingsModel.mainNav});
+            }
+        }
+
+    }
+
+    function SubNavModule(sandbox) {
+        var currentCategorys = null;
+
+        function activeOne(category){
+            _.each(currentCategorys, function(elem){
+                if (elem == category) {
+                    elem.active = true;
+                } else {
+                    elem.active =false;
+                }
+            });
+        }
+
+        var SubNavView = Backbone.View.extend({
+            tagName: 'li',
+            events: {
+                "click": "showPlugins"
+            },
+            showPlugins: function(){
+                this.$el.addClass('active').siblings().removeClass("active");
+                activeOne(this.model);
+                sandbox.emit("subCategoryChange", this.model);
+            },
+            initialize: function(){
+
+                this.$el.html(this.model.category_name);
+                if (this.model.active) {
+                    this.$el.addClass("active");
+                }
+            }
+        });
+
+        var SubNavListView = Backbone.View.extend({
+            el: $(".J_subNav"),
+
+            initialize: function(){
+
+            },
+            render: function() {
+                var self = this;
+                this.$el.html("");
+                _.each(this.model, function(e){
+                    self.$el.append((new SubNavView({model:e})).el);
+                });
+                return this;
+            }
+        });
+
+        return {
+            init: function(){
+                var subNav = new SubNavListView();
+
+                sandbox.on("mainCategoryChanged", function(cName){
+                    var categorys = global.settingsModel[cName]
+                    if (categorys) {
+                        currentCategorys = categorys;
+                        subNav.model = categorys;
+                        subNav.render();
+                        sandbox.emit("subCategoryChange", _.findWhere(categorys, {active:true}));
+                    } else {
+                        QN.plgcenter.invoke({
+                            cmd:"queryCategory2",
+                            param: {
+                                platform: cName
+                            },
+                            success: function(rsp){
+                                currentCategorys = categorys = global.settingsModel[cName] = resetId(rsp);
+                                categorys[0].active = true;
+                                subNav.model = categorys;
+                                subNav.render();
+                                sandbox.emit("subCategoryChange", _.findWhere(categorys, {active:true}));
+                            }
+                        });
+                    }
+                });
+            }
+        }
+    }
+
+    function pluginsModule (sandbox) {
+        var PluginsView = Backbone.View.extend({
+            el: $(".J_plugins"),
+            template: _.template($("#J_pluginsTmpl").html()),
+            events: {
+                "click .J_visible": "toggleVisible",
+                "click .J_plg": "plgClick"
+            },
+            toggleVisible: function(e) {
+                var elem = $(e.target);
+                global.pluginsMap[this.model.categoryId].visible = elem.is(":checked") ? 1 : 0;
+            },
+            plgClick: function() {
+                var def = _.map($(".J_plg:checked"), function(elem){
+                    return $(elem).val();
+                });
+                global.pluginsMap[this.model.categoryId].def = def;
+            },
+            initialize: function(){
+
+            },
+            render: function() {
+                this.$el.html(this.template(this.model));
+                return this;
+            }
+        });
+        return {
+            init: function(){
+
+                var plugins = new PluginsView();
+
+                sandbox.on("subCategoryChange", function(categoryInfo){
+                    var categoryId = categoryInfo.category_id;
+                    if (global.pluginsMap[categoryId]) {
+                        plugins.model = global.pluginsMap[categoryId];
+                        plugins.render();
+                    } else {
+                        QN.plgcenter.invoke({
+                            cmd: "queryPlugins",
+                            param: {
+                                category_ids: categoryId
+                            },
+                            success: function(rsp) {
+                                var response = {
+                                    title: global.pluginsNote,
+                                    noteImg: global.noteImg,
+                                    id: categoryInfo.baseId,
+                                    categoryId: categoryId,
+                                    pluginList: rsp,
+                                    def: categoryInfo.user_default_plugin.split(","),
+                                    checkdList: [],
+                                    visible: categoryInfo.visible,
+                                    hidden: categoryInfo.hidden,
+                                    type: categoryInfo.type,
+                                    shotIndex: categoryInfo.user_sort_index
+                                }
+                                global.pluginsMap[categoryId] = response;
+                                plugins.model = response;
+                                plugins.render();
+                            }
+                        });
+                    }
+                });
+            }
+        }
+    }
+
+    function resetId(list){
+        return _.map(list, function(elem){
+            var nelem = _.extend(elem, {baseId: elem.id});
+            delete nelem.id;
+            return nelem;
+        });
+    }
+
+    function getUrlParam(name){
+        var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+        var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+        if (r!=null) return unescape(r[2]); return null; //返回参数值
+    }
+
+    var core = new scaleApp.Core();
+
+    window.onload = function(){
+        QN.application.invoke({
+            cmd: "getLoginuser",
+            success: function(rsp){
+                global.userNick = rsp.user_nick;
+                global.userId = rsp.user_id;
+            },
+            error: function(rsp) {
+                core.emit("toast", rsp.sub_msg || "系统繁忙，请稍后再试");
+                global.debug && core.emit("toast", JSON.stringify(rsp));
+            }
+        });
+        try {
+            core.register("SubNavModule", SubNavModule);
+            core.register("MainNavModule", MainNavModule);
+            core.register("pluginsModule", pluginsModule);
+            core.start("pluginsModule");
+            core.start("SubNavModule");
+            core.start("MainNavModule");
+        } catch(e) {
+            console.error("init error");
+            console.error(e);
+        }
+
+        var initTab = getUrlParam("platform");
+
+        if (initTab) {
+            core.emit("mainCategoryChange", initTab);
+        } else {
+            core.emit("mainCategoryChange", "pc");
+        }
+
+        var showNote = false;
+
+        $(".J_plugins").delegate(".J_checkbox", "mouseenter", function(e){
+            var elem = $(e.currentTarget);
+            showNote = true;
+            setTimeout(function(){
+                if (showNote) {
+                    elem.addClass("active");
+                }
+            }, 300);
+        });
+
+        $(".J_plugins").delegate(".J_checkbox", "mouseout", function(e){
+            var elem = $(e.currentTarget);
+            showNote = false;
+            setTimeout(function(){
+                if (!showNote) {
+                    elem.removeClass("active");
+                }
+            }, 300);
+        });
+
+        $(".J_save").click(function(){
+            var request = [];
+            _.each(_.values(global.pluginsMap), function(elem){
+                if (elem.def != null) {
+                    request.push({
+                        "id": elem.id,
+                        "userId": global.userId,
+                        "categoryId": parseInt(elem.categoryId),
+                        "defaultPlugin": elem.def.join(","),
+                        "sortIndex": elem.shotIndex,
+                        "visible": elem.visible
+                    });
+                }
+            });
+
+            QN.plgcenter.invoke({
+                cmd: "setUserCategoryInfo",
+                param: {
+                    plugins: request
+                },
+                success: function(rsp){
+                    QN.application.invoke({
+                        cmd: "closePluginConfigWindow"
+                    });
+                }
+            });
+        });
+
+        $(".J_cancle").click(function(){
+            QN.application.invoke({
+                cmd: "closePluginConfigWindow"
+            });
+        });
+
+        QN.initTheme();
+    };
+})(jQuery);</script>
+
+</body>
+</html>

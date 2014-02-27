@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<style type="text/css">
+    table,td{
+        border: 1px solid #ccc;
+        border-spacing: 0;
+        border-collapse:collapse;
+
+    }
+    td{
+        padding: 5px;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .pickedBG{
+        background: #ccc;
+    }
+    .winningBG{
+        background: green;
+    }
+
+</style>
+<h1>创建卡片,：B 列是1～15，I 列是16～30，N 列是31～45，G 列是46～60，O 列是61～75。</h1>
+<table >
+    <tr>
+        <th>B(1~15)</th>
+        <th>I(16~30)</th>
+        <th>N(31~45)</th>
+        <th>G(46~60)</th>
+        <th>O(61~75)</th>
+    </tr>
+    <tr>
+        <td id="square0">&nbsp;</td>
+        <td id="square5">&nbsp;</td>
+        <td id="square10">&nbsp;</td>
+        <td id="square14">&nbsp;</td>
+        <td id="square19">&nbsp;</td>
+
+    </tr>
+    <tr>
+        <td id="square1">&nbsp;</td>
+        <td id="square6">&nbsp;</td>
+        <td id="square11">&nbsp;</td>
+        <td id="square15">&nbsp;</td>
+        <td id="square20">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="square2">&nbsp;</td>
+        <td id="square7">&nbsp;</td>
+        <td id="free">Free</td>
+        <td id="square16">&nbsp;</td>
+        <td id="square21">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="square3">&nbsp;</td>
+        <td id="square8">&nbsp;</td>
+        <td id="square12">&nbsp;</td>
+        <td id="square17">&nbsp;</td>
+        <td id="square22">&nbsp;</td>
+    </tr>
+    <tr>
+        <td id="square4">&nbsp;</td>
+        <td id="square9">&nbsp;</td>
+        <td id="square13">&nbsp;</td>
+        <td id="square18">&nbsp;</td>
+        <td id="square23">&nbsp;</td>
+    </tr>
+</table>
+<p><a href="script01.html" id="reload">Click here</a> to create a new card</p>
+
+<script type="text/javascript">
+    window.onload = initAll;
+    //在运行时声明设置数组
+
+
+    var buzzwords = new Array("Aggregate",
+            "Ajax",
+            "API",
+            "Bandwidth",
+            "Beta",
+            "Bleeding edge",
+            "Convergence",
+            "Design pattern",
+            "Disruptive",
+            "DRM",
+            "Enterprise",
+            "Facilitate",
+            "Folksonomy",
+            "Framework",
+            "Impact",
+            "Innovate",
+            "Long tail",
+            "Mashup",
+            "Microformats",
+            "Mobile",
+            "Monetize",
+            "Open social",
+            "Paradigm",
+            "Podcast",
+            "Proactive",
+            "Rails",
+            "Scalable");
+    var usedWords = new Array(buzzwords.length);
+
+    function initAll(){
+        document.getElementById('reload').onclick = anotherCard;
+        newCard();
+    }
+    //创建卡
+    function newCard(){
+        for(var i = 0; i<24; i++){
+            setSquare(i);
+        }
+    }
+    function setSquare(thisSquare){
+        var currSquare = "square" + thisSquare;
+
+        do{
+            var randomWord =  getNewNum() ;
+        }while(usedWords[randomWord]);
+
+        usedWords[randomWord] = true;
+        document.getElementById(currSquare).innerHTML = buzzwords[randomWord];
+
+        //css
+        document.getElementById(currSquare).className = "";
+        document.getElementById(currSquare).onmousedown = toggleColor;
+
+    }
+    function getNewNum(){
+        return Math.floor(Math.random()*buzzwords.length);
+    }
+
+    //用户事件
+    function anotherCard(){
+        for(var i = 1; i < buzzwords.length; i++){
+            //初始化数组,不会留下空格
+            usedWords[i] = false;
+        }
+        newCard();
+        return false;
+    }
+
+    //css 交互
+    function toggleColor(evt){
+        if(evt){
+            var thisSquare = evt.target;
+        }else{
+            var thisSquare = window.event.srcElement;
+        }
+
+        if(thisSquare.className == ""){
+            thisSquare.className = "pickedBG";
+        }else{
+            thisSquare.className = "";
+        }
+
+        checkWin();
+    }
+
+    function checkWin(){
+        var winningOption = -1;
+        var setSquares = 0;
+        var winners = new Array(31,992,15360,507904,541729,557328,1083458,2162820,4329736,8519745,8659472,16252928);
+
+        for(var i = 0; i < 24; i++){
+            var currSquare = "square" +i;
+            if(document.getElementById(currSquare).className != ""){
+                document.getElementById(currSquare).className = 'pickedBG';
+                setSquares = setSquares | Math.pow(2,i);
+            }
+        }
+
+        for(var i = 0; i < winners.length; i++){
+            if((winners[i] & setSquares) == winners[i]){
+                winningOption = i;
+            }
+        }
+
+        if(winningOption > -1){
+            for(var i = 0; i < 24; i++){
+                if(winners[winningOption] & Math.pow(2,i)){
+                    currSquare = 'square' + i;
+                    document.getElementById(currSquare).className = 'winningBG';
+                }
+            }
+        }
+
+    }
+</script>
+</body>
+</html>

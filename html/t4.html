@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+<style>
+    .demo_box{
+        position: absolute;
+        right: 0;
+        top: 30px;
+
+        width: 0;
+        height: 0;
+        background: #008000;
+        overflow: hidden;
+    }
+    .animation_name{
+        -webkit-animation:0.5s 0.5s ease infinite;
+        -webkit-animation-name:demo;
+        -webkit-animation-iteration-count:1;
+        -webkit-animation-fill-mode:forwards
+    }
+
+    @-webkit-keyframes demo{
+        0%{
+            right:0;
+        }
+        100%{
+
+            right:0;
+            width:300px;
+            height: 300px;
+        }
+    }
+    .box{
+        position: relative;
+    }
+    #J_btn{
+        width: 80px;
+        height: 25px;
+        text-align: center;
+        line-height: 25px;
+        cursor:pointer;
+        background: #000000;
+        color: #fff;
+        overflow: hidden;
+        margin:0 -40px;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        border-radius: 5px;
+
+    }
+    .help-btn{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+        height: 25px;
+        text-align: center;
+        cursor: pointer;
+        line-height: 25px;
+        border-radius: 5px;
+        background: #ccc;
+        overflow: hidden;
+
+    }
+</style>
+<div class="box">
+    <div class="help-btn">帮助</div>
+    <div class="demo_box">
+        <div id="J_btn">我知道了</div>
+    </div>
+</div>
+<script>
+    (function($){
+        $('.help-btn,#J_btn').on('click',function(){
+            $('.demo_box').toggleClass('animation_name');
+        });
+
+    })(jQuery)
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+</head>
+<body>
+
+<div id="search_container"></div>
+
+<script id="search_template" type="text/template">
+    <label><%=search_label %></label>
+    <input type="text" id="search_input">
+    <input value="Search" id="search_button" type="button"/>
+
+</script>
+<script>
+    (function($){
+        //view 是用来显示model中的数据到页面的,同时它也可用来监听 DOM上的事件然后做出响应.
+        SearchView = Backbone.View.extend({
+            initialize:function(){
+                //alert('init a searchView');
+                this.render();
+            },
+            render:function(){
+                //使用underscore这个库,来编译模板
+                var template = _.template($("#search_template").html(),{
+                    search_label:"search test"
+
+                });
+                //加载模板到对应的el属性中
+                $(this.el).html(template);
+                console.log(this.el);
+            },
+            events:{
+                'click input[type=button]':'doSearch'//定义类型为button的input标签的点击事件,触发doSearch函数
+            },
+            doSearch:function(event){
+                alert('search for ' + $("#search_input").val());
+            }
+        });
+
+        var searchView = new SearchView({
+            el:$('#search_container')
+        });
+
+        searchView.render();
+        //这个reander的方法可以放到viewr的构造函数中
+
+    })(jQuery);
+
+</script>
+</body>
+</html>

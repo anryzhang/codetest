@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>JavaScript判断鼠标滚轮滚动方向 站长学院www.pigzz.com</title>
+    <script type="text/javascript">
+        function handle(delta) {
+            var s = delta + ": ";
+            if (delta < 0)
+                s += "您在向下滚……";
+            else
+                s += "您在向上滚……";
+            document.getElementById('delta').innerHTML = s;
+        }
+        function wheel(event) {
+            var delta = 0;
+            if (!event) event = window.event;
+            if (event.wheelDelta) {
+                delta = event.wheelDelta / 120;
+                if (window.opera) delta = -delta;
+            } else if (event.detail) {
+                delta = -event.detail / 3;
+            }
+            if (delta)
+                handle(delta);
+        }
+
+        if (window.addEventListener){
+            window.addEventListener('DOMMouseScroll', wheel, false);
+        }
+        window.onmousewheel = document.onmousewheel = ;
+    </script>
+</head>
+<body>
+<div id="delta">滚动中轮试试~请选按着中轮滚动，激活后可以不按，直接滚动。</div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var S = KISSY, $ = S.all;
+
+    /******黄金令箭埋点********/
+    function detect(str){
+        var hold = +new Date(),
+                img = window[hold] = new Image,
+                nick = S.Cookie.get('_nk_');
+        img.src = "http://log.mmstat.com/"+str+"?cache="+Math.floor(Math.random()*10000000)+ "&nick=" + nick;
+        img.onload = (img.onerror = function(){
+            window[hold] = null;
+        });
+        img = null;
+    }
+    function dacttest(num){
+        console.log("dacttest" + num);
+    }
+
+
+</script>
+<a href="javascript: void(0);" onclick="detect(1);dacttest(3);">test</a>
+
+
+</body>
+</html>

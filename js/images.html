@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<div class="centered">
+    <a href="">
+        <img src="http://i.mmcdn.cn/simba/img/T1PxqrXxtbXXb1upjX.jpg" id="adBanner" alt=""/>
+    </a>
+
+</div>
+
+<script type="text/javascript">
+    window.onload = initBannerLink;
+    var thisAd = 0;
+    function initBannerLink(){
+        if(document.getElementById("adBanner").parentNode.tagName == "A"){
+            document.getElementById("adBanner").parentNode.onclick = newLocation;
+        }
+        rotate();
+    }
+
+    function newLocation(){
+        var adUrl = new Array('1.html','2.html','3.html');
+        document.location.href = 'http://www.' + adUrl[thisAd];
+        return false;
+    }
+
+    function rotate(){
+        var adImages = new Array(
+                "http://i.mmcdn.cn/simba/img/T1PxqrXxtbXXb1upjX.jpg",
+                "http://img01.taobaocdn.com/tps/i1/T1jIlAFclcXXcr_tT7-490-170.jpg",
+                "http://i.mmcdn.cn/simba/img/T1KUVuFfBgXXb1upjX.jpg"
+        );
+        thisAd++;
+        if(thisAd == adImages.length){
+            thisAd = 0;
+        }
+        document.getElementById('adBanner').src = adImages[thisAd];
+        setTimeout(rotate,3*1000);
+    }
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<div id="test" class="c_test" data-config="1234" title="测试">
+    测试123
+</div>
+<script type="text/javascript">
+    function output(element){
+        var pairs = new Array(),
+            attrName,
+            attrValue,
+            i,
+            len;
+        for(i = 0, len = element.attributes.length; i < len; i++){
+            attrName = element.attributes[i].nodeName;
+            attrValue = element.attributes[i].nodeValue;
+            //在IE 中，所有未设置过的特性的该
+            //属性值都为false，而在其他浏览器中根本不会为这类特性生成对应的特性节点（因此，在这些浏览器
+            //中，任何特性节点的specified 值始终为true）
+            if(element.attributes[i].specified){
+                pairs.push(attrName + "=" + attrValue);
+
+            }
+
+        }
+
+        var pairsItems = pairs;
+        var item;
+        var items = {};
+
+        for(var h=0;h<pairsItems.length; h++){
+            item = pairsItems[h].split("=");
+            console.log(item);
+            var itemName = item[0];
+            var itemVal = item[1];
+            items[itemName] = itemVal;
+
+
+
+        }
+        console.log(items)
+        //console.log(pairs);// id=test class=c_test data-config=1234 title=测试
+        return pairs.join(" ");
+    }
+   var ele = document.getElementById("test");
+    output(ele)
+</script>
+</body>
+</html>

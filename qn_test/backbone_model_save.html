@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
+    <script src="http://documentcloud.github.com/backbone/backbone-min.js"></script>
+</head>
+<body>
+
+<script>
+    Man = Backbone.Model.extend({
+        url:"save/test.json",//对象的获取与保存,需要为对象定义一个url属性,调用save方法时,会post对象的所有属性到server端.
+        initialize:function(){
+            alert('hey, you create me!');
+            this.bind("change:name",function(){
+                var name = this.get("name");
+                alert("you change name is property: " + name);
+            });
+            this.bind('error',function(){
+                alert(error);
+            });
+        },
+        defaults:{
+            name: 'anry',
+            age: '27'
+        },
+        validate:function(att){
+            if(att.name == ''){
+                return "name is not empty!";
+            }
+        },
+        aboutMe:function(){
+            return 'my name is ' + this.get('name') + 'now ' + this.get('age');
+        }
+    });
+
+    var man = new Man;
+    man.set({name:'coco'});
+    man.save();
+    //会发送post到模型对应的url,数据格式为json{"name":"anr","age":27}
+    //然后接着就是从服务器端获取数据使用方法fetch([options]);
+    var manOne = new Man;
+//    manOne.fetch();
+    //第一种方法:如果使用fetch方法,那么他会发送get请求到你的model的url中,
+    //你在服务器端可以通过判断是get还是post来进行对应的操作.
+
+
+    //不过接受服务器端返回的数据方法是这样的:
+    manOne.fetch({
+        url:"save/test.json",
+        success:function(model,response){
+            alert('success');
+            //model为获取到的数据
+            alert(model.get("name"));
+        },
+        error:function(){
+            alert('error');//当返回格式不正确或者是非json数据时,会执行此方法.
+        }
+    })
+</script>
+
+</body>
+</html>

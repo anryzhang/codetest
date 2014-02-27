@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+
+<script type="text/javascript">
+    var p = document.createElement("P");
+    var test = "test";
+    p.innerHTML = test;
+
+    document.title = "test dom";
+    var ele = document.body;
+    ele.appendChild(p)
+
+    var url = document.URL;
+    console.log(url);
+    var domain = document.domain;
+    console.log(domain);
+
+    var allElements = document.getElementsByTagName("*");
+    console.log(allElements);
+
+</script>
+
+</body>
+</html>

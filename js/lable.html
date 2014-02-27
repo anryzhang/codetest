@@ -7,17 +7,17 @@
 </head>
 <body>
 <script type="text/javascript">
-
-    function isArray(x){
-        return ((typeof x == 'object') && (x.constructor == Array));
+    var count = 10;
+    var i = 0;
+    s_start: for(i; i < count; i++){
+        console.log(i)
+        if(i == 5){
+            break  s_start;
+        }
     }
 
-    var a = new Array(1,2,3);
-    if(isArray(a)){
-        console.log('true');
-    }else{
-        console.log('flase');
-    }
+
+
 </script>
 </body>
 </html>

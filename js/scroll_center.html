@@ -1,0 +1,18 @@
+<html>
+<head><title>用方向键来控制图片移动 站长学院</title>
+    <script language="javascript">
+    function move() {
+        key = event.keyCode;
+        x = parseInt(pic.style.left);
+        y = parseInt(pic.style.top);
+        step = 2;
+        if (key == 37)  pic.style.left = x - step;
+        if (key == 38)  pic.style.top = y - step;
+        if (key == 39)  pic.style.left = x + step;
+        if (key == 40)  pic.style.top = y + step;
+    }
+    document.onkeydown = move;
+    </script>
+</head>
+<body> 请按&larr;&uarr;&rarr;&darr;键 <img id="pic" src="http://interface.im.daily.taobao.net/mobileimweb/fileupload/downloadPriFile.do?type=1&fileId=T1t3WzXohlXXXXXXXX.tfsprivatejpg&suffix=jpg&width=281&height=6696&mediaSize=382325&t=0.48117294907569885" style=" position:absolute;left:100px;top:100px"></body>
+</html>

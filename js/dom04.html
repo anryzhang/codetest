@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<div id="test" class="cont" data-app="12345" data-test="test data">test</div>
+<script type="text/javascript">
+var div = document.getElementById("test");
+var appId = div.dataset.app;
+var test = div.dataset.test;
+
+    console.log( appId);
+    console.log( test);
+</script>
+</body>
+</html>

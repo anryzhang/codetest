@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <style type="text/css">
+        .layout{
+            width: 800px;
+            height: 600px;
+            overflow: hidden;
+            padding-left:30px;
+        }
+        #J_box{
+            width: 200px;
+            height: 100px;
+            overflow: hidden;
+            background: #ccc;
+        }
+    </style>
+</head>
+<body>
+<div class="layout">
+
+    <div id="J_box">测试</div>
+</div>
+<script type="text/javascript">
+    function getElementLeft(element){
+        var actleft = element.offsetLeft;
+        var current = element.offsetParent;
+
+        while(current !== null){
+            actleft += current.offsetLeft;
+            current = current.offsetParent;
+        }
+        console.log(actleft);
+        return actleft;
+    }
+
+    setTimeout(function(){
+        var Layout = document.getElementById("J_box").parentNode;
+        var i = 0;
+
+        if(i<10){
+
+            Layout.paddingLeft = Layout.cssText="padding-left:1px;";
+            console.log(Layout.paddingLeft);
+        }
+
+        console.log(Layout.paddingLeft);
+    },1000);
+    var J_box = document.getElementById("J_box");
+    getElementLeft(J_box);
+
+</script>
+</body>
+</html>

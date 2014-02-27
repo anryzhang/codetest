@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<style type="text/css">
+    .ecup-r_nav{
+        position: absolute;
+        right: 20px;
+        overflow: hidden;
+    }
+    .ecup-r_nav a{
+        display: block;
+        width:120px;
+        height: 25px;
+        line-height: 25px;
+        overflow: hidden;
+    }
+</style>
+<body>
+<a href="javascript:void(0);" class="ecup-share_s"  id="J_st_shoucang">请收藏页面，便于您关注活动进展</a>
+
+
+<div class="ecup-r_nav" id="J_r_nav">
+    <a href="#item1" target="_self" class="ecup-f">手机充值返利</a>
+    <a href="#item2" target="_self" class="ecup-y">免费领优惠券</a>
+    <a href="#item3" target="_self" class="ecup-l">特惠返利商品</a>
+    <a href="#" class="ecup-go">微博互动赢免单</a>
+</div>
+
+<script type="text/javascript">
+
+
+    /* 收藏 共用函数 */
+    var $ = function (id) {
+        return typeof id === "string" ? document.getElementById(id) : id
+    };
+
+    /* 添加到收藏 */
+    var addFavorite = function (id) {
+        $(id).onclick = function () {
+            var title = document.title,
+                    url = document.location.href;
+            try {
+                window.external.addFavorite(url, title);
+            } catch (e) {
+                try {
+                    window.sidebar.addPanel(title, url, "");
+                } catch (e) {
+                    alert('您的浏览器不支持此功能，您可以按下"Ctrl+d"键加入收藏！');
+                }
+            }
+        }
+    }
+    new addFavorite("J_st_shoucang");
+
+    /* 导航 */
+    var tips;
+    var theTop = 140;
+    var old = theTop;
+    function initFloatTips() {
+        tips = document.getElementById('J_r_nav');
+        moveTips();
+    };
+
+    function moveTips() {
+        var tt = 50;
+        if (window.innerHeight) {
+            pos = window.pageYOffset
+        } else if (document.documentElement && document.documentElement.scrollTop) {
+            pos = document.documentElement.scrollTop
+        } else if (document.body) {
+            pos = document.body.scrollTop;
+        }
+        pos = pos - tips.offsetTop + theTop;
+        pos = tips.offsetTop + pos / 10;
+        if (pos < theTop)
+            pos = theTop;
+        if (pos != old) {
+            tips.style.top = pos + "px";
+            tt = 10;
+        }
+        old = pos;
+        setTimeout(moveTips, tt);
+    }
+    initFloatTips();
+</script>
+</body>
+</html>

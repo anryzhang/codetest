@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var o = {
+        x:3.14,
+        y:4,
+        t:function(){
+            var self = this;
+            console.log(parseInt(self.x.toString()), self.y);
+        }
+    };
+    var ox = o.propertyIsEnumerable('x');
+    o.t();
+    console.log(ox);
+</script>
+</body>
+</html>

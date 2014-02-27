@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title>寄生组合式继承</title>
+</head>
+<body>
+<script type="text/javascript">
+/*这个例子的高效率体现在它只调用了一次SuperType 构造函数，并且因此避免了在SubType.
+ prototype 上面创建不必要的、多余的属性。与此同时，原型链还能保持不变；因此，还能够正常使用
+ instanceof 和isPrototypeOf()。开发人员普遍认为寄生组合式继承是引用类型最理想的继承范式。*/
+
+function object(o){
+    function F(){}
+    F.prototype = o;
+    return new F();
+}
+function inheritPrototype(subType,superType){
+    var prototype = object(superType.prototype);
+        prototype.constructor = subType;
+        subType.prototype = prototype;
+}
+function SuperType(name){// 构
+    this.name = name;
+    this.colors = ["red","blue","green"];
+}
+SuperType.prototype.sayName = function(){//原
+    console.log(this.name);
+};
+function SubType(name,age){//构
+    SuperType.call(this,name);
+    this.age = age;
+}
+inheritPrototype(SubType,SuperType);
+SubType.prototype.sayAge = function(){
+    console.log(this.age);
+};
+
+var instan1 = new SubType('anry',27);
+    instan1.sayName();
+    instan1.sayAge();
+    instan1.colors.push("block");
+    console.log(instan1.colors);
+
+var instan2 = new SubType('coco',22);
+    instan2.sayName();
+    instan2.sayAge();
+    console.log(instan2.colors);
+</script>
+</body>
+</html>

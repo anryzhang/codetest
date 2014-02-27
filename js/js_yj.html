@@ -1,0 +1,40 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <title>屏蔽鼠标右键代码 js代码 www.pigzz.com</title>
+</head>
+<body>
+<script language="JavaScript">
+    <!--
+    if (window.Event){
+        document.captureEvents(Event.MOUSEUP);
+    }
+
+    function nocontextmenu() {
+        event.cancelBubble = true
+        event.returnValue = false;
+        return false;
+    }
+    function norightclick(e) {
+        if (window.Event) {
+            if (e.which == 2 || e.which == 3)
+                return false;
+        }else if (event.button == 2 || event.button == 3) {
+            event.cancelBubble = true
+            event.returnValue = false;
+            return false;
+        }
+    }
+    document.oncontextmenu = nocontextmenu;  // for IE5+
+    document.onmousedown = norightclick;  // for all others
+    //-->
+</script>
+<p>小猪站长学院致力于网页标准的传播,提供DIV CSS XHTML等学习教材,标准化的网页代码</p>
+
+<p>符合W3C标准的网页设计,提供建站资源,设计字体等资源下载的综合性站长学习平台</p>
+
+<p>你所下载的代码来自<a href="http://www.pigzz.com" _fcksavedurl="http://www.pigzz.com">小猪站长学院</a> ,欢迎下载
+    使用</p>
+
+</body>
+</html>

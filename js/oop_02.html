@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <script src="https://s.tbcdn.cn/s/kissy/1.2.0/kissy-min.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var book = {
+        _year:2004,//表示只能通过对象方法访问的属性
+        edition:1
+    };
+    //要修改属性默认的特性，必须使用ECMAScript 5 的Object.defineProperty()方法。这个方法
+   // 接收三个参数：属性所在的对象、属性的名字和一个描述符对象。其中，描述符（descriptor）对象的属
+   // 性必须是：configurable、enumerable、writable 和value
+//    [[Configurable]]：表示能否通过delete 删除属性从而重新定义属性，能否修改属性的特
+//    性，或者能否把属性修改为数据属性。对于直接在对象上定义的属性，这个特性的默认值为
+//    true。
+//    ? [[Enumerable]]：表示能否通过for-in 循环返回属性。对于直接在对象上定义的属性，这
+//    个特性的默认值为true。
+
+    Object.defineProperty(book,'year',{ //修改对象的默认特性.
+        get:function(){ //在读取时调用的函数.
+            return this._year;
+        },
+        set:function(newValue){ //在写入属性时调用的函数.
+            if(newValue > 2004){
+                this._year = newValue;
+                this.edition += newValue - 2004;
+            }
+        }
+
+    });
+
+    book.year = 2005;
+    alert(book._year);//2005
+    alert(book.edition);//2
+
+</script>
+</body>
+</html>

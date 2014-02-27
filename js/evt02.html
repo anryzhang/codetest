@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+    <style type="text/css">
+        #J_btn{
+            width:80px;
+            height: 25px;
+            overflow: hidden;
+            background: #0381c2;
+            color:#fff;
+            text-align: center;
+            line-height: 25px;
+            border-radius:3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="height:2000px;">
+<div id="J_btn" title="title 测试">测试</div>
+<script type="text/javascript">
+    var btn = document.getElementById("J_btn");
+
+    var EventUtul = {
+        addHandler:function(element,type,handler){
+            if(element.addEventListener){
+                element.addEventListener(type,handler,false);
+            }else if(element.attachEvent){
+                element.attachEvent("on" + type,handler);
+            }else{
+                element["on"+type]= handler;
+            }
+        },
+        getEvent:function(event){
+            return event ? event : window.event;
+        },
+        getTarget:function(event){
+            return event.target || event.srcElement;
+        },
+        preventDefault:function(event){
+            if(event.preventDefault){
+                event.preventDefault();
+            }else{
+                event.returnValue = false;
+            }
+        },
+        removeHandler:function(element,type,handler){
+            if(element.removeEventListener){
+                element.removeEventListener(type,handler,false);
+            }else if(element.detachEvent){
+                element.detachEvent("on" + type,handler);
+            }else{
+                element["on" + type] = null;
+            }
+        },
+        stopPropagation:function(event){
+            if(event.stopPropagation){
+                event.stopPropagation();
+            }else{
+                event.cancelBubble = true;
+            }
+        }
+
+    };
+
+
+    function handler(event){
+        var events = EventUtul.getEvent(event);
+        var target = EventUtul.getTarget(events);
+        EventUtul.preventDefault(events);
+        switch (events.type){
+            case "click":
+                alert("click");
+                break;
+            case "mouseover":
+                target.style.backgroundColor = "green";
+                break;
+            case "mouseout":
+                target.style.backgroundColor = "";
+                break;
+        }
+    }
+
+    EventUtul.addHandler(btn,'click',handler);
+    EventUtul.addHandler(btn,'mouseover',handler);
+    EventUtul.addHandler(btn,'mouseout',handler);
+    //，Opera、Chrome 和Safari ,ie
+    EventUtul.addHandler(document,'mousewheel',function(event){
+       var event = EventUtul.getEvent(event);
+        console.log(event.wheelDelta); //120 || -120
+    });
+    //ff
+    EventUtul.addHandler(window,'DOMMouseScroll',function(event){
+       var event = EventUtul.getEvent(event);
+        console.log(event.detail); // 3 || -3
+    });
+   
+//    btn.onclick = handler;
+//    btn.onmouseover = handler;
+//    btn.onmouseout = handler;
+</script>
+</body>
+</html>

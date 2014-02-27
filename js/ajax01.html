@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="gbk"/>
+    <title></title>
+</head>
+<body>
+<script type="text/javascript">
+
+    function createXMLHttpRequest() { //建立XMLHttpRequest
+        var xmlHttp;
+        try {
+          return  xmlHttp= new XMLHttpRequest();
+        } catch (e) {
+            try {
+                return  xmlHttp = new ActiveXObject("Msxml2.XMLHTTP");
+            } catch (ee) {
+                try {
+                    return   xmlHttp = new ActiveXObject("Microsoft.XMLHTTP");
+                } catch (err) {
+                    xmlHttp = false;
+                }
+            }
+        }
+        if(!xmlHttp) alert("不能创建XMLHttpRequest对象");
+    }
+
+    var xhr = createXMLHttpRequest();
+
+    xhr.open('get','test_ajax.json',false);
+    xhr.send(null);
+    if(xhr.readyState == 4){
+
+        var jsonText = JSON.parse(xhr.responseText);
+        console.log(jsonText);
+    }
+
+
+</script>
+</body>
+</html>
