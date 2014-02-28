@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var o = {
+        toString:function(){
+            return 'test'
+        }
+    };
+    for(var p in o){
+        if(p == "toString"){
+            alert('found toString');
+        }
+    }
+
+</script>
+</body>
+</html>

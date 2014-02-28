@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function Person(){
+
+    }
+    Person.prototype = {
+        name: 'anry',
+        age:27,
+        job:'web',
+        sayName:function(){
+            alert(this.name);
+        }
+    };
+
+
+    var key = Object.keys(Person.prototype);
+    alert(key);
+    var p1 = new Person();
+    p1.name = 'coco';
+    p1.age= 23;
+    var p1key = Object.keys(p1);
+    alert(p1key);
+</script>
+</body>
+</html>

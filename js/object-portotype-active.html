@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+</head>
+<body>
+<script>
+    function Person(name,age,job){
+        var o = new Object();
+        o.name = name;
+        o.age = age;
+        o.job = job;
+        o.sayName = function(){
+            alert(this.name);
+        };
+        return o;
+    }
+
+    var friend = new Person('anry',27,'web');
+    friend.sayName();
+
+
+
+</script>
+</body>
+</html>
