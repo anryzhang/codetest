@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+    <style>
+        ul,li{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .J_item{
+            border: 1px solid #ccc;
+            margin-right:5px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+<ul>
+    <li class="J_item">001</li>
+    <li class="J_item">002</li>
+    <li class="J_item">003</li>
+    <li class="J_item">004</li>
+    <li class="J_item">005</li>
+    <li class="J_item">006</li>
+    <li class="J_item">007</li>
+    <li class="J_item">008</li>
+</ul>
+<script>
+    (function($){
+
+        $('.J_item').each(function(){
+            $(this).on('mouseenter',function(){
+                $(this).css({"background":'green',"color":'#fff'})
+                        .siblings()
+                        .attr("style","");
+
+                console.log($(this).text());
+            });
+
+        })
+    })(jQuery);
+</script>
+</body>
+</html>

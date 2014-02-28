@@ -1,4 +1,36 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<style>
+    ul,li{
+        list-style:none;
+    }
+</style>
+<div id="j_e">test</div>
+<ul>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+</ul>
+<script>
+    window.onload = function(){
+        var li = document.getElementsByTagName("li");
+        for(var i = 0; i<li.length; i++){
+            li[i].onmouseover = function(){
+                this.style.backgroundColor="blue";
+            };
+            li[i].onmouseout = function(){
+                this.style.backgroundColor = 'white';
+            };
+        }
+=======
 <html>
 <head>
     <meta charset="gbk"/>
@@ -25,6 +57,7 @@
         docBody.appendChild(newGraf);
         return false;
 
+>>>>>>> 248df68eef73d3f04dc9486da61e06c550a842fb
     }
 </script>
 </body>

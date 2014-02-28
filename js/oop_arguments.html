@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function sendMessage(msg,obj){
+        if(arguments.length == 2){
+            obj.handleMsg(msg);
+        }else{
+            document.write(msg);
+        }
+    }
+    sendMessage("hello,world");
+
+    sendMessage("hello",{
+        handleMsg:function(msg){
+            document.write("this is a custom message:" + msg + makeArray(1,2,3,4));
+        }
+    });
+    function makeArray(){
+        var arr = [];
+        for(var i = 0; i< arguments.length;i++){
+            arr.push(arguments[i]);
+        }
+        return arr;
+    }
+
+
+    function disError(msg){
+        if(typeof msg == 'undefined'){
+            msg = 'an error msg';
+        }
+        alert(msg);
+    }
+    disError(1);
+</script>
+</body>
+</html>

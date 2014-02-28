@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    
+    var objj = document.getElementById('J_c');
+    objj.style.border = '1px solid red';
+
+    setTimeout(function(){
+        objj.style.display = 'none';
+    },1000);
+    function delay(msg,time){
+        setTimeout(function(){
+            alert(msg);
+        },time);
+    }
+    delay('welcome',2000);
+</script>
+</body>
+</html>

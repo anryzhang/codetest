@@ -1,4 +1,44 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    //创建课程
+    function Lecture(name,teacher){
+        this.name = name;
+        this.teacher = teacher;
+    }
+    //课程方法
+    Lecture.prototype.display = function(){
+        return this.teacher + '讲授' + this.name;
+    };
+    //创建课表分类
+    function Schedule(lectures){
+        this.lectures = lectures;
+    }
+    //课程分类方法
+    Schedule.prototype.display = function(){
+        var str = "";
+        for(var i = 0; i< this.lectures.length;i++){
+            str += this.lectures[i].display() + "<br>";
+        }
+        return str;
+    };
+    //实例化一个课表
+    var mySchedule = new Schedule([
+        new Lecture('语文','李老师'),
+        new Lecture('数学','宋老师'),
+        new Lecture('外语','王老师'),
+    ]);
+
+    var ele = document.createElement('div');
+    ele.innerHTML = mySchedule.display();
+    document.body.appendChild(ele);
+=======
 <html>
 <head>
     <meta charset="gbk"/>
@@ -18,6 +58,7 @@
     window.onload = function(){
         person.sayName();
     }
+>>>>>>> 248df68eef73d3f04dc9486da61e06c550a842fb
 </script>
 </body>
 </html>
