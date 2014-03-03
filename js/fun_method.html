@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function MyObj(){
+        //私有变量各私有函数
+        var pri = 10;
+        function priFun(){
+            return false;
+        }
+        //特权方法
+        this.pubFun = function(){
+            pri++;
+            return priFun();
+        }
+    }
+    var o = new MyObj();
+    o.pubFun();
+    console.log(o.pubFun());//false
+</script>
+</body>
+</html>

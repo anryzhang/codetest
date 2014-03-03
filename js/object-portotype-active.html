@@ -7,22 +7,33 @@
 </head>
 <body>
 <script>
-    function Person(name,age,job){
-        var o = new Object();
-        o.name = name;
-        o.age = age;
-        o.job = job;
-        o.sayName = function(){
-            alert(this.name);
-        };
-        return o;
+    function inPrototype(Sub,Sup){
+        var prototype = Object(Sup.prototype);
+        prototype.constructor = Sub;
+        Sub.prototype = prototype;
+    }
+    function SuperType(name){
+        this.name = name;
+        this.colors = ["r", "b", "g"];
+    }
+    SuperType.prototype.sayName = function(){
+        console.log(this.name);
+    };
+    function SubType(name, age){
+        SuperType.call(this, name); //第1次调用SuperType()
+        this.age = age;
     }
 
-    var friend = new Person('anry',27,'web');
-    friend.sayName();
+    inPrototype(SubType,SuperType);
 
+    SubType.prototype.sayAge = function(){
+        console.log(this.age);
+    };
 
-
+    var instance = new SubType('anry','27');
+    instance.sayName();
+    instance.sayAge();
+    console.log(instance.colors);
 </script>
 </body>
 </html>
