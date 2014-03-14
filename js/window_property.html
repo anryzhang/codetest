@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://code.jquery.com/jquery-2.1.0.js"></script>
+</head>
+<body>
+<script>
+    function getArgs(){
+        //取得查询字符串并去掉开头的问号
+        var qs = (location.search.length > 0 ? location.search.substring(1):"");
+        //保存数据对象
+        var args = {};
+        //取得第一项
+        var items = qs.length ? qs.split("&"):[];
+        var item = null;
+        var name = null;
+        var value = null;
+        //在for循环中使用
+        var i = 0;
+        var len = items.length;
+        //将第一项添加到args对象中
+        for(i = 0; i< len; i++){
+            item = items[i].split("=");
+            name = decodeURIComponent(item[0]);
+            value = decodeURIComponent(item[1]);
+            if (name.length){
+                args[name] = value;
+            }
+        }
+        return args;
+    }
+    var getA = getArgs();
+    console.log(getA['age']);
+</script>
+</body>
+</html>
