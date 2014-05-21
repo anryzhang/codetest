@@ -1,6 +1,4 @@
-#test code
+## codetest 
+html: angularjs php html5
+template: KISSY template demo
 
-####添加平时的测试文件,
-1. rb-flash 测试动态加载声音
-2. template KISSY template demo
-2. flash  falsh/as3 练习
