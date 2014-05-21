@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>数组去重</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
+</head>
+<body>
+<script>
+    /*
+    * 数组去重
+    * 1.创建一个新的数组存放结果
+    * 2.创建一个空对象
+    * 3.for,每次取出一个元素与对象进行对比,如果元素不重复,则把它存放到结果数组中,
+    * 同时把这个元素的内容作为对象的一个属性,存入到对象中.
+    * 说明,至于如何对比,就是每次从原数组中取出一个元素,然后到对象中去访问这个属性,
+    * 如果能访问到值,则说明重复
+    * */
+    function arrs(arr){
+        var newArr = [];
+        var json = {};
+        var len = arr.length;
+        for(var i = 0; i< len; i++){
+            if(!json[arr[i]]){
+                newArr.push(arr[i]);
+                json[arr[i]] = arr[i];
+            }
+        }
+        return newArr;
+    }
+
+    var a = ['ar',3,5,3,6,'ar','br'];
+    console.log(arrs(a));
+
+</script>
+</body>
+</html>

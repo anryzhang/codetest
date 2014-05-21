@@ -1,0 +1,122 @@
+<html>
+<head>
+    <title></title>
+    <meta charset=utf-8>
+    <meta name=description content="">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<style>
+
+    #canvas{
+        width:300px;
+        height:300px;
+        background:orange;
+        font:italic 13px century gothic;
+        color:darkseagreen   ;
+        padding: 5px;
+    }
+
+    #selector{
+        width:500px;
+        height:50px;
+        border:solid 1px grey;
+    }
+
+    #selector li{
+        width:100px;
+        height:50px;
+        line-height: 50px;
+        list-style: none;
+        display: inline-block;
+    }
+
+    .darkmagenta {
+        background: darkmagenta ;
+    }
+
+    .green{
+        background: green;
+    }
+
+    .brown{
+        background: brown;
+    }
+
+    .darkslateblue{
+        background: darkslateblue;
+    }
+
+</style>
+
+<script>
+    function init(){
+        var lists = document.getElementsByTagName("li");
+        /*set drag icon*/
+        var dragicon = document.createElement("img");
+        dragicon.src = 'mini-vector-icons.png';
+
+        /*effectAllowed 一般在dragstart中设置*/
+        for (var i = 0; i < lists.length; i++) {
+            lists[i].setAttribute("draggable",true);
+            lists[i].addEventListener("dragstart",function(e){
+                var dataTransfer = e.dataTransfer;
+                dataTransfer.setDragImage(dragicon,-5,-15);
+                dataTransfer.effectAllowed = 'copy';
+                dataTransfer.setData("text/plain",this.getAttribute("class"));
+            },false)
+        }
+
+        var canvas = document.getElementById("canvas");
+
+        /*dropEffect 一般在dragover中设置*/
+        canvas.addEventListener("dragover",function(e){
+            var dataTransfer = e.dataTransfer;
+            dataTransfer.dropEffect = 'copy';
+            e.preventDefault();
+        },false)
+
+
+        canvas.addEventListener("dragend",function(e){
+            e.preventDefault();
+        },false)
+
+        canvas.addEventListener("drop",function(e){
+            var dataTransfer = e.dataTransfer;
+            var className = dataTransfer.getData("text/plain");
+            this.style.backgroundColor = className;
+            e.preventDefault();
+            e.stopPropagation();
+        },false)
+    }
+    document.ondragover = function(e){e.preventDefault();};
+    document.ondrop = function(e){e.preventDefault();};
+</script>
+<body onload="init()">
+<ul id="selector">
+    <li class="darkmagenta "></li>
+    <li class="green"></li>
+    <li class="brown"></li>
+    <li class="darkslateblue"></li>
+</ul>
+
+<div id="canvas">
+    <details>
+        <summary><h3>支持拖动处理的mime类型</h3></summary>
+        text/plain </br>
+        text/html </br>
+        text/xml </br>
+        text/uri-list
+    </details>
+
+    <details>
+        <summary><h3>DataTransfer对象的属性与方法</h3></summary>
+        dropEffect </br>
+        effectAllowed </br>
+        setData </br>
+        getData </br>
+        clearData(String format) [不带参数清空所有数据]</br>
+        setDragImage
+    </details>
+</div>
+</body>
+</html>

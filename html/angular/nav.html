@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.js"></script>
+
+    <style>
+        nav{
+            background: #5597b4;
+            border-radius: 2px;
+            box-shadow: 0 1px 1px #ccc;
+        }
+        nav a{
+            display: inline-block;
+            padding: 18px 30px;
+            color:#fff;
+            font:bold 16px/1 'sans-serif';
+            text-decoration: none;
+            text-transform: uppercase;
+            background: transparent;
+        }
+        nav a:first-child{
+            border-radius:2px 0 0 2px;
+        }
+        nav a:last-child{
+            border-radius:0 2px 2px 0;
+        }
+        nav.home .home,nav.yy .yy,nav.fx .fx,nav.hy .hy{
+            background: #e35885;
+        }
+    </style>
+
+</head>
+<body>
+<div id="J_nav" ng-app>
+    <nav class="{{active}}" ng-click="$event.preventDefault()">
+        <a href="#" class="home" ng-click="active='home'">首页</a>
+        <a href="#" class="yy" ng-click="active='yy'">商品运营</a>
+        <a href="#" class="fx" ng-click="active='fx'">商品分析</a>
+        <a href="#" class="hy" ng-click="active='hy'">行业分析</a>
+    </nav>
+    <p ng-show="active">点击{{active}}</p>
+</div>
+</body>
+</html>

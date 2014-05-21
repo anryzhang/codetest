@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="Keywords" content="会员,QQ会员,QQ特权,QQ生活特权,QQ游戏特权,QQ购物特权" />
+        <meta name="Description" content="" />
+        <meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0"/>
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<title>会员活动页面响应式设计</title>
+		<link rel="stylesheet" href="src/global_v2.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="src/mod_paypop.css" media="screen">
+		<!-- <link rel="stylesheet" type="text/css" href="css/style.css" media="screen and (min-width: 640px)">
+		<link rel="stylesheet" href="css/phone.css" media="screen and (max-width: 639px)" /> -->
+		<!--[if lt IE 9]>
+			<link rel="stylesheet" type="text/css" href="css/style.css" media="screen" >
+		<![endif]-->
+		
+		<link rel="stylesheet" href="src/phone.css" media="screen" />
+	</head>
+	<body>
+		<div class="mod_st">
+			<div class="mod_st_main">
+			    <h2 class="mod_st_logo"><a href="http://vip.qq.com/" title="QQ会员" target="_blank"> QQ会员</a></h2>
+			    <h3 class="mod_st_tit"> 导航</h3>
+			    <ul class="mod_st_nav"></ul>
+			    <div class="mod_st_userinfo">
+			    	<!-- 登录前 -->
+			        欢迎您，请先<a class="mod_st_login" href="#" title="登录">登录</a>
+			        
+			        <!-- 登录后 -->
+			        <span class="user_nick">欢迎您，桀骜︶ㄣ不逊</span>
+				    <a href="#" class="bt_center">个人中心</a>
+				    <a href="#"> 退出</a>
+				    
+			        <span class="mod_st_btn">
+			            <a href="#" target="_blank" class="link_be_vip mod_btn_vip" title="开通会员"><span> 开通会员 </span></a>
+			        </span>
+			    </div>
+			</div>
+		</div>
+		<div class="act_wrapper">
+			<div class="act_inner">
+				<div class="act_content">
+					<!-- banner -->
+					<div class="act_banner">
+						<img src="http://oklai.name/m/placeholder/?320x150" alt="" />
+					</div>
+					
+					<!-- 视频 -->
+					<div class="act_video">
+						<div class="header">逆战宣传视频</div>
+						<div class="player"><img src="http://oklai.name/m/placeholder/?320x255" alt=""></div>
+					</div>
+					
+					<!-- 普通礼包列表 -->
+					<!-- 栏目标题 slidebtn: up\down ,默认up-->
+					<h2 class="act_title">注册享好<span class="slidebtn" data-rel="#part_1"></span>礼</h2>
+					<div class="act_part" id="part_1">
+						<p class="act_text">凡X月X日-X月X日期间注册的逆战用户可免费领取新手礼包；QQ会员用户可额外领取会员礼包。</p>
+						<div class="act_spree_list">
+							<div class="inner" id="demo_scroll">
+								<ul>
+									<li>
+										<p class="name">1111111天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">瞬移卷轴10个、瞬移卷轴10个、瞬移卷轴10个、瞬移卷轴10个、瞬移卷轴10个
+												瞬移卷轴10个、瞬移卷轴10个、瞬移卷轴10个</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+									<li>
+										<p class="name">2222222天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、
+												卧龙城回城符10个、卧龙城回城符10个</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+									<li>
+										<p class="name">3333333天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+									<li>
+										<p class="name">4444444天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">50积分、50积分、50积分、50积分、50积分、50积分、50积分、50积分、50积分、50积分、50积分、50积分、50积分、50积分、50积分、</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+									<li>
+										<p class="name">5555555天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">瞬移卷轴10个、瞬移卷轴10个、瞬移卷轴10个、卧龙城回城符10个、1.25倍经验丹15个、坐骑经验丹10个、50积分</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<a href="#" class="act_btn">领取新手礼包</a>
+						<hr class="act_hr_20">
+						<div class="act_spree_list">
+							<div class="inner">
+								<ul>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+						<a href="#" class="act_btn">领取会员礼包</a>
+					</div>
+					
+					<!-- 含单个大图礼包列表 -->
+					<h2 class="act_title">开通年费<span class="slidebtn" data-rel="#part_2"></span>礼包</h2>
+					<div class="act_part" id="part_2">
+						<p class="act_text">凡X月X日-X月X日期间注册的逆战用户可免费领取新手礼包；QQ会员用户可额外领取会员礼包。</p>
+						<div class="act_spree_list">
+							<div class="inner">
+								<ul>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<img src="http://oklai.name/m/placeholder/?112x62" alt="">
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="act_icon_plus">加</div>
+						<div class="act_bigspree">
+							<p class="name">随机得到以下1个道具  15天</p>
+							<img src="http://oklai.name/m/placeholder/?298x112" alt="">
+							<div class="detail_wrap">
+								<div class="detail">
+									<p class="text">卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、
+									卧龙城回城符10个、卧龙城回城符10个</p>
+								</div>
+								<div class="arrow"></div>
+							</div>
+						</div>
+						<a href="#" class="act_btn">领取年费礼包</a>
+						<p class="act_count">已有<span class="act_num">888888</span>领取礼包</p>
+					</div>
+					
+					<!-- 多大图礼包列表 -->
+					<h2 class="act_title">游戏练级<span class="slidebtn"></span>拿好礼</h2>
+					<div class="act_part">
+						<p class="act_text">凡X月X日-X月X日期间注册的逆战用户可免费领取新手礼包；QQ会员用户可额外领取会员礼包。</p>
+						<div class="act_multispree_list">
+							<div class="inner">
+								<ul>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<p class="price">(价值10Q币)</p>
+										<img src="http://oklai.name/m/placeholder/?112x73" alt="">
+										<a href="#" class="act_btn">领取礼包</a>
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、
+												卧龙城回城符10个、卧龙城回城符10个</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<p class="price">(价值10Q币)</p>
+										<img src="http://oklai.name/m/placeholder/?112x73" alt="">
+										<a href="#" class="act_btn">领取礼包</a>
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<p class="price">(价值10Q币)</p>
+										<img src="http://oklai.name/m/placeholder/?112x73" alt="">
+										<a href="#" class="act_btn">领取礼包</a>
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、
+												卧龙城回城符10个、卧龙城回城符10个</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<p class="price">(价值10Q币)</p>
+										<img src="http://oklai.name/m/placeholder/?112x73" alt="">
+										<a href="#" class="act_btn">领取礼包</a>
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个、25倍经验丹15个</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+									<li>
+										<p class="name">黄金M4 7天</p>
+										<p class="price">(价值10Q币)</p>
+										<img src="http://oklai.name/m/placeholder/?112x73" alt="">
+										<a href="#" class="act_btn">领取礼包</a>
+										<div class="detail_wrap">
+											<div class="detail">
+												<p class="text">卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、卧龙城回城符10个、
+												卧龙城回城符10个、卧龙城回城符10个</p>
+											</div>
+											<div class="arrow"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						
+					</div>
+					
+					<!-- 转发微博抽奖 -->
+					<h2 class="act_title">转发微博<span class="slidebtn"></span>抽奖</h2>
+					<div class="act_part">
+						<div class="act_text">凡X月X日-X月X日期间注册的逆战用户可免费领取新手礼包；QQ会员用户可额外领取会员礼包。</div>
+						<!-- 选项列表 -->
+						<hr class="act_hr_10">
+						<ul class="act_select_list">
+							<li><label>
+								<input type="radio" name="weibo"/>
+								<p>转播微博获取抽奖资格转播微博获取抽奖资转播微博获取抽奖资格转播微博获取抽奖资格</p>
+							</label></li>
+							<li><label>
+								<input type="radio" name="weibo"/>
+								<p>转播微博获取抽奖资格转播微博获取抽奖资转播微博获取抽奖资格转播微博获取抽奖资格</p>
+							</label></li>
+							<li><label>
+								<input type="radio" name="weibo"/>
+								<p>转播微博获取抽奖资格转播微博获取抽奖资转播微博获取抽奖资格转播微博获取抽奖资格</p>
+							</label></li>
+						</ul>
+						<a href="#" class="act_subbtn">
+							<span class="step">第1步</span>
+							转发微博获取抽奖资格
+						</a>
+						<hr class="act_hr_10"/>
+						<p class="act_count">现在有<span class="act_num">888</span>次抽奖资格</p>
+						<!-- 抽奖图 -->
+						<div class="act_lottery">
+							<img src="http://oklai.name/m/placeholder/?300x200" alt="">
+						</div>
+						<a href="#" class="act_btn">
+							<span class="step">第2步</span>
+							立即抽奖
+						</a>
+					</div>
+					
+					<h2 class="act_title">转发微博<span class="slidebtn"></span>抽奖</h2>
+					<div class="act_part">
+						<ul class="act_text_list">
+							<li>1088588***获得iphone5一个iphone5一个iphone5一个</li>
+							<li>1088588***获得iphone5一个</li>
+							<li>1088588***获得iphone5一个</li>
+							<li>1088588***获得iphone5一个</li>
+							<li>1088588***获得iphone5一个</li>
+							<li>1088588***获得iphone5一个</li>
+							<li>1088588***获得iphone5一个</li>
+							<li>1088588***获得iphone5一个</li>
+						</ul>
+					</div>
+					
+					<h2 class="act_title">活动规则<span class="slidebtn"></span></h2>
+					<div class="act_part act_rule">
+						1.新注册、游戏练级即可获得会员积分和游戏等级礼包。
+						<br>2.在本页面开通会员可获得积分奖励，开通的月数越多获得的积分越多。<a href="#" class="mod_btn_vip">开通会员</a>
+						<br>3.该页面礼包活动期间只可兑换1次。
+						<br>4.宝箱开开乐每次扣除50积分，活动期间可多次开启。<a href="#">查看我的礼包</a>
+						<br>5.活动时间：2013年4月28日 -9月21日 
+					</div>
+					
+					<h2 class="act_title">游戏介绍<span class="slidebtn"></span></h2>
+					<div class="act_part act_intro">
+						<p class="act_intro_text">
+							《上古世纪》是韩国网游第一人宋在京开发的第三代网游。游戏采用世界最顶尖的CryEngine3引擎开发，百余种自定义职业，电影级的视觉效果和画面表现力；恢弘庞大的世界观设计，惊险刺激的海战和攻城战，多种族错综复杂的爱恨情仇。玩家拥有更高的自由度，充分地跟环境互动，自己创造内容和玩法，永久改变游戏世界。第三代创新网游《上古世纪》将为你带来前所未有的惊喜！
+						</p>
+						<div class="act_img_list act_intro_img">
+							<ul>
+								<li><img src="http://oklai.name/m/placeholder/?114x64" alt=""></li>
+								<li><img src="http://oklai.name/m/placeholder/?114x64" alt=""></li>
+								<li><img src="http://oklai.name/m/placeholder/?114x64" alt=""></li>
+								<li><img src="http://oklai.name/m/placeholder/?114x64" alt=""></li>
+								<li><img src="http://oklai.name/m/placeholder/?114x64" alt=""></li>
+							</ul>
+						</div>
+						<div class="act_intro_video">
+							<img src="http://oklai.name/m/placeholder/?300x225" alt="">
+						</div>
+					</div>
+					
+					
+					<h2 class="act_title">更多活动<span class="slidebtn"></span></h2>
+					<div class="act_part">
+						<ul class="act_text_list">
+							<li><a href="#">更多活动更多活动更多活动更多活动更多活动更多活动更多活动更多活动</a></li>
+							<li><a href="#">更多活动更多活动</a></li>
+							<li><a href="#">更多活动更多活动</a></li>
+							<li><a href="#">更多活动更多活动</a></li>
+							<li><a href="#">更多活动更多活动</a></li>
+						</ul>
+					</div>
+					
+					<a href="#" class="mod_btn_vip">开通会员</a>
+					<a href="#" class="mod_btn_vip_em">开通会员</a>
+					<a href="#" class="mod_btn_yearvip">开通年费会员</a>
+					<a href="#" class="mod_btn_yearvip_em">开通年费会员</a>
+					<a href="#" class="mod_btn_xf">续费会员</a>
+					<a href="#" class="mod_btn_xf_em">续费会员</a>
+					<a href="#" class="mod_btn_yearxf">续费年费会员</a>
+					<a href="#" class="mod_btn_yearxf_em">续费年费会员</a>
+					
+					<!-- 版权信息 -->
+					<div class="mod_copyright"></div>
+				</div>
+			</div>
+
+			<div class="act_bg">
+				<div class="bg_act_1"></div>
+				<div class="bg_act_2"></div>
+				<div class="bg_act_3"></div>
+				<div class="bg_act_4"></div>
+				<div class="bg_act_5"></div>
+				<div class="bg_act_6"></div>
+				<div class="bg_act_7"></div>
+			</div>
+		</div>
+		
+		<!-- phone设备检测元素 -->
+		<div id="phoneDetect" style="display:none"></div>
+
+		<!-- 蒙板层 开始 -->
+		<div class="mod_pop_mask" style="display:none"></div>
+		<!-- 蒙板层 结束 -->
+	
+	<div class="mod_pop_gd_v3" style="display:none">
+		<!-- 提示浮层 -->
+		<div class="mod_pop_wrap" style="width:460px;">
+			<div class="mod_pop_gd_hd">
+				<h3>弹出窗口标题</h3>
+				<button type="button" title="关闭弹出层">关闭</button>
+			</div>
+			<div class="mod_pop_gd_bd">
+				<div class="info_success">
+					<h4>操作成功！</h4>
+					<p>文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文字说明文明文字说明</p>
+				</div>
+			</div>
+			<div class="mod_pop_gd_ft">
+				<a href="#" class="btn_fit_pop"><span>普通状态</span></a>
+				<a href="#" class="btn_dis_pop"><span>按钮不可点态</span></a>
+			</div>
+		</div>
+			
+		<!-- 支付弹窗 -->
+		<!-- 第一步 开始-->
+		<div class="mod_pop_wrap pay_step_1" style="width: 460px;display:none">
+			<div class="mod_pop_gd_hd">
+				<h3>开通QQ会员</h3>
+				<button type="button" title="关闭弹出层" class="close">关闭</button>
+			</div>
+			<div class="mod_pop_gd_bd">
+				<fieldset class="mod_pay_number">
+					<legend></legend>
+					<label>您要赠送的QQ号码：<input type="text" class="mod_pay_input" name="payfor_uin" maxlength="10"></label>
+					<label>确认赠送的QQ号码：<input id="openUIN2" type="text" class="mod_pay_input" name="payfor_uin_confirm" maxlength="10"></label>
+				</fieldset>
+				<div class="pay_mod_jifen">
+					<div class="pay_mod_xiaoq">
+						<h2 class="info" id="pay_qtip">主人，带我回家吧，我有70多项超强的功能哦！</h2>
+					</div>
+					<div class="pay_mod_infomain">
+						<h3 class="payfrom">您的支付帐号：<strong class="c_tx1" id="openUIN">403227363</strong></h3>
+							<ul class="infolist">
+								<li><label><input type="radio" name="time" value="1" checked="checked"><span>1个月</span></label></li>
+								<li><label><input type="radio" name="time" value="3"><span>3个月</span></label></li>
+								<li><label><input type="radio" name="time" value="12"><span>12个月</span></label></li>
+								<li><label><input type="radio" name="time" value="other"><span>其他<input type="text" name="time_other" value="24" maxlength="2" class="short_text" disabled="">个月</span></label></li>
+							</ul>
+						<p class="btn"><a href="javascript:void(0);" class="btn_fit_em_pop mod_pop_btn1"><span>下一步</span></a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+        <!-- 第一步 结束-->
+        
+        <!-- 第二步 开始 -->
+        <div class="mod_pop_wrap pay_step_2" style="width: 460px;display:none">
+            <div class="mod_pop_gd_hd">
+                <h3>开通QQ会员</h3>
+                <button type="button" title="关闭" class="close"><span>关闭</span></button>
+            </div>
+            <div class="mod_pop_gd_bd">
+                <div class="mod_pay_tabs">
+                    <ul>
+                        <li class="tab_qb  mod_tabs_current" data-rel="qb">
+                        	<a href="#" title=""><span class="qb_discount_info">Q点/Q币<strong></strong></span></a>
+                        </li>
+                        <li class="tab_tenpay" data-rel="tenpay">
+                        	<a href="#" title="9.1折"><span class="tenpay_discount_info">财付通<strong>(9.1折)</strong></span></a>
+                        </li>
+                        <li class="tab_bank" data-rel="bank">
+                        	<a href="#" title="9.3折"><span class="bank_discount_info">网上银行<strong>(9.3折)</strong></span></a>
+                        </li>
+                    </ul>
+                </div>
+                <!--== S Q币==-->
+                <div class="mod_pay_con qb">
+                    <fieldset class="mod_pay_qb">
+                        <legend>Q点/Q币</legend>
+                        <p class="hot paid_month_msg">您购买了<span class="paid_month">1</span>个月QQ会员</p>
+                        <p class="hot paid_amount">付款金额：10Q币，1 Q币=10 Q点</p>
+                        <label>
+                            <input type="checkbox" name="q_dian">
+                            <span>优先使用Q点支付，Q点余额不足时，使用Q币支付不足部分费用。</span></label>
+                        <label class="auto_pay_label">
+                            <input type="checkbox" name="auto_qb" checked="checked">
+                            <span>到期后自动续费，Q点余额不足时，使用Q币支付不足部分费用。</span></label>
+                        <p class="extra_info"></p>
+                    </fieldset>
+                </div>
+                <!--== E Q币==--> <!--== S 财付通 ==-->
+                <div class="mod_pay_con tenpay" style="display: none;">
+                    <fieldset class="mod_pay_tenpay">
+                        <legend>财付通</legend>
+                        <p class="hot paid_month_msg">您购买了<span class="paid_month">1</span>个月QQ会员</p>
+                        <p class="hot paid_amount">付款金额：10Q币，1 Q币=10 Q点</p>
+                        <label>付款QQ账号：
+                            <input type="text" class="mod_pay_input" name="pay_uin" maxlength="10">
+                        </label>
+                        <label class="auto_pay_label">
+                            <input type="checkbox" name="auto_tenpay">
+                            <span>使用财付通自动续费，同意并接受<a href="https://www.tenpay.com/v2.0/main/trust/trust_service.shtml" target="_blank">《财付通委托和扣款协议》</a></span> </label>
+                        <p class="extra_info"></p>
+                    </fieldset>
+                </div>
+                <!--== E 财付通 ==--> <!--== S 网银 ==-->
+                <div class="mod_pay_con bank" style="display: none;">
+                    <fieldset class="mod_pay_bank">
+                        <legend>网上银行</legend>
+                        <p class="hot paid_month_msg">您购买了<span class="paid_month">1</span>个月QQ会员</p>
+                        <p class="hot paid_amount">付款金额：10Q币，1 Q币=10 Q点</p>
+                        <h4>请选择支付银行</h4>
+                        <label>
+                            <input name="bank" type="radio" value="1002" checked="checked">
+                            工商银行</label>
+                        <label>
+                            <input name="bank" type="radio" value="1003">
+                            建设银行</label>
+                        <label>
+                            <input name="bank" type="radio" value="1038">
+                            招商银行</label>
+                        <label>
+                            <input name="bank" type="radio" value="1005">
+                            农业银行</label>
+                        <label>
+                            <input name="bank" type="radio" value="1052">
+                            中国银行</label>
+                        <label>
+                            <input name="bank" type="radio" value="1020">
+                            交通银行</label>
+                        <label>
+                            <input name="bank" type="radio" value="8002">
+                            其它银行</label>
+                        <p class="extra_info"></p>
+                    </fieldset>
+                </div>
+                <!--== E 网银 ==--> </div>
+            <div class="mod_pop_gd_ft"> <a href="#" class="btn_fit_em_pop mod_pop_btn1"><span>下一步</span></a> </div>
+        </div>
+        <!-- 第二步 结束 -->
+        
+        <!-- 第三步 结束 -->
+        <div class="mod_pop_wrap" style="width:460px;display:none">
+	        <div class="mod_pop_gd_hd">
+	            <h3>提示</h3>
+	            <button type="button" title="关闭弹出层">关闭</button>
+	        </div>
+	        <div class="mod_pop_gd_bd">
+	            <div class="pay_mod_successful">
+	            	<div class="pay_mod_xiaoq">
+	                	<h2 class="info" title="主人，小红毛从现在就开始为您服务了哦！">主人，小红毛从现在就开始为您服务了哦！</h2>
+	                </div>
+	                <div class="pay_mod_infomain">
+	                	<div class="success_info">
+	                    	<h2 title="恭喜您，QQ会员服务开通成功！">恭喜您，QQ会员服务开通成功！</h2>
+	                        <p class="details" title="您本次给QQ帐号245827349开通了1个月的QQ会员">您本次给QQ帐号<span class="c_tx1">245827349</span>开通了1个月的QQ会员</p>
+	                        <h3 title="您还可以参加以下活动：">您还可以参加以下活动：</h3>
+	                        <a href="#" class="photo" title=""><img src="http://oklai.name/m/placeholder/?200x60" alt=""></a>
+	                        <p class="btn"><a href="#" class="btn_fit_em_pop mod_pop_btn1"><span> 确 定 </span></a></p>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </div>
+	    <!-- 第三步 结束 -->
+     </div>
+        
+	
+		<script type="text/javascript" src="src/youxi_nav.js" charset="utf-8"></script>
+
+		
+		<script type="text/javascript" src="src/iscroll.min.js"></script>
+		<script type="text/javascript">
+		(function () {
+			var isMobile = false;
+			var phoneDetect = document.getElementById('phoneDetect'),
+				color = getStyle(phoneDetect, "color"),
+				backgroundColor = getStyle(phoneDetect, "background-color");
+
+			if (color === 'rgb(255, 0, 0)'  && backgroundColor === 'rgb(255, 0, 0)') {
+				isMobile = true;
+			}
+
+			window.isMobile = isMobile;
+
+			//get element style
+			function getStyle(oElm, strCssRule){
+				var strValue = "";
+				if(document.defaultView && document.defaultView.getComputedStyle){
+					strValue = document.defaultView.getComputedStyle(oElm, "").getPropertyValue(strCssRule);
+				}
+				else if(oElm.currentStyle){
+					strCssRule = strCssRule.replace(/\-(\w)/g, function (strMatch, p1){
+						return p1.toUpperCase();
+					});
+					strValue = oElm.currentStyle[strCssRule];
+				}
+				return strValue;
+			}
+		})();
+		//alert(window.isMobile);
+		
+		//for mobile page
+		jQuery(function($){
+			//礼包详情
+			$('.act_multispree_list li,.act_spree_list li').click(function () {
+				var self = $(this);
+				self.siblings().find('.detail_wrap').hide();
+				self.find('.detail_wrap').toggle();
+			})
+			$('.act_bigspree').click(function () {
+				$(this).find('.detail_wrap').toggle();
+			})
+
+			//打开关闭视频
+			$('.act_video .header').click(function () {
+				$(this).parent().toggleClass('show');
+			});
+
+			//折叠模块
+			$('.slidebtn').click(function() {
+				var id = $(this).attr('data-rel');
+				
+				if (!id) return false;
+
+				$(id).toggleClass('hide');
+				$(this).toggleClass('down');
+			});
+		});
+		
+		//just test
+		jQuery(function ($) {
+			//关闭弹窗
+			$('.mod_pop_gd_v3 .mod_pop_gd_hd button').click(function () {
+				$('.mod_pop_gd_v3,.mod_pop_mask').hide();
+			});
+
+			//打开弹窗测试
+			$('.act_btn').click(function() {
+				$('.mod_pop_gd_v3').css("top", $(window).scrollTop()).show();
+				$('.mod_pop_mask').css({
+					"position": "absolute",
+					"height": $(document).height()
+				}).show();
+				return false;
+			});
+
+			//横向滚动列表
+			$('.act_spree_list,.act_multispree_list,.act_img_list').each(function () {
+				var self = $(this),
+					length = self.find('li').length,
+					w = length * 124;
+				self.find('ul').width(w);
+			});
+
+			$('.act_spree_list .inner,.act_multispree_list .inner,.act_img_list ').each(function () {
+				var timeId;
+				 new iScroll(this, {
+					hScroll: true,
+				    onBeforeScrollStart: function (e) {
+				        if ( this.absDistX > (this.absDistY + 5 ) ) {
+				            // user is scrolling the x axis, so prevent the browsers' native scrolling
+				            e.preventDefault();
+				        }
+				    },
+				    onTouchEnd: function () {
+				    	var self = this;
+				    	if (self.touchEndTimeId) {
+				    		clearTimeout(self.touchEndTimeId);
+				    	}
+				    	
+				    	self.touchEndTimeId = setTimeout(function () {
+				    		self.absDistX = 0;
+				    		self.absDistX = 0;	
+				    	}, 600);
+				    }
+				});
+			})
+		});
+		</script>
+	</body>
+</html>

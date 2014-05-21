@@ -1,0 +1,973 @@
+@charset "utf-8";
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\000039}}
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
+  -webkit-overflow-scrolling: touch;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000318}}
+body {
+  font: 14px/1.5 "微软雅黑", helvetica, arial;
+  background: #EEE;
+  color: #333333;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000323}}
+a {
+  color: #cc0000;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000324}}
+a:hover {
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000325}}
+.act_wrapper {
+  width: 320px;
+  overflow: hidden;
+  max-width: 320px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #FFF;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000333}}
+.act_wrapper .act_bg {
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000334}}
+.act_wrapper .act_inner {
+  width: 100%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000336}}
+#mobileDetect {
+  color: #ff0000;
+  background-color: #ff0000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000339}}
+.hide {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000340}}
+.hide_p {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000341}}
+.textOverflow {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000347}}
+.inlineBlock {
+  font-size: 0px;
+  letter-spacing: -3px;
+  white-space: nowrap;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000349}}
+.inlineBlock li {
+  font-size: 14px;
+  letter-spacing: 0;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000351}}
+.flexbox {
+  display: -webkit-box;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000353}}
+.flexbox li {
+  -webkit-box-orient: vertical;
+  -webkit-box-flex: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000360}}
+.bgicon {
+  background: url(../img/bg_sprites.png) no-repeat;
+  background-size: 78px auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000366}}
+.act_title {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 10px;
+  border-bottom: 2px solid #cc0000;
+  border-top: 1px solid #e6e6e6;
+  background: #f6f6f6;
+  background: -webkit-linear-gradient(top, #f6f6f6 0%, #f0f0f0 44%, #ebebeb 100%);
+  font-size: 18px;
+  color: #cc0000;
+  font-weight: normal;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000374}}
+.act_title .slidebtn {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  width: 18px;
+  height: 18px;
+  margin-top: -9px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000380}}
+.act_title .slidebtn.down:after {
+  background-position: -13px -38px;
+  margin-top: -1px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000382}}
+.act_title .slidebtn:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 9px;
+  height: 4px;
+  margin-top: -2px;
+  margin-left: -4px;
+  background: url(../img/bg_sprites.png) no-repeat;
+  background-size: 78px auto;
+  background-position: -13px -33px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000391}}
+.act_text,
+.act_count {
+  color: #777777;
+  font-size: 12px;
+  line-height: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000392}}
+.act_text {
+  padding: 0 10px;
+  margin: 5px 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000393}}
+.act_count {
+  text-align: center;
+  margin-top: 5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000396}}
+.act_part {
+  padding: 10px 10px 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000398}}
+.act_part .act_text {
+  padding: 0;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003101}}
+.act_num {
+  color: #cc0000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003104}}
+.act_hr_5,
+.act_hr_10,
+.act_hr_15,
+.act_hr_20 {
+  display: block;
+  height: 5px;
+  overflow: hidden;
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003105}}
+.act_hr_10 {
+  height: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003106}}
+.act_hr_15 {
+  height: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003107}}
+.act_hr_20 {
+  height: 20px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003110}}
+.spressName {
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #EEE;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003115}}
+.spressDetail {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  white-space: normal;
+  background-color: #666;
+  color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px #444;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003121}}
+.spressDetail .text {
+  padding: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003123}}
+.spressArrow {
+  position: relative;
+  top: -18px;
+  margin-left: 45px;
+  width: 18px;
+  height: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003126}}
+.spressArrow:after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url(../img/bg_sprites.png) no-repeat;
+  background-size: 78px auto;
+  background-position: -42px -33px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003133}}
+.act_spree_list {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003136}}
+.act_spree_list .inner {
+  padding-top: 10px;
+  overflow-x: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003137}}
+.act_spree_list ul {
+  font-size: 0px;
+  letter-spacing: -3px;
+  white-space: nowrap;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000349}}
+.act_spree_list ul li {
+  font-size: 14px;
+  letter-spacing: 0;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003138}}
+.act_spree_list li {
+  margin-right: 10px;
+  width: 114px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003139}}
+.act_spree_list li:last-child {
+  margin-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003140}}
+.act_spree_list .name,
+.act_spree_list .price {
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #EEE;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003141}}
+.act_spree_list .price {
+  color: #cc0000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003142}}
+.act_spree_list img {
+  width: 112px;
+  height: 62px;
+  border: 1px solid #e6e6e6;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003145}}
+.act_spree_list .detail_wrap {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003146}}
+.act_spree_list .detail {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  white-space: normal;
+  background-color: #666;
+  color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px #444;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003121}}
+.act_spree_list .detail .text {
+  padding: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003147}}
+.act_spree_list .arrow {
+  position: relative;
+  top: -18px;
+  margin-left: 45px;
+  width: 18px;
+  height: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003126}}
+.act_spree_list .arrow:after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url(../img/bg_sprites.png) no-repeat;
+  background-size: 78px auto;
+  background-position: -42px -33px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003150}}
+.act_multispree_list {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003136}}
+.act_multispree_list .inner {
+  padding-top: 10px;
+  overflow-x: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003137}}
+.act_multispree_list ul {
+  font-size: 0px;
+  letter-spacing: -3px;
+  white-space: nowrap;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000349}}
+.act_multispree_list ul li {
+  font-size: 14px;
+  letter-spacing: 0;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003138}}
+.act_multispree_list li {
+  margin-right: 10px;
+  width: 114px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003139}}
+.act_multispree_list li:last-child {
+  margin-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003140}}
+.act_multispree_list .name,
+.act_multispree_list .price {
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #EEE;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003141}}
+.act_multispree_list .price {
+  color: #cc0000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003142}}
+.act_multispree_list img {
+  width: 112px;
+  height: 62px;
+  border: 1px solid #e6e6e6;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003145}}
+.act_multispree_list .detail_wrap {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003146}}
+.act_multispree_list .detail {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  white-space: normal;
+  background-color: #666;
+  color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px #444;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003121}}
+.act_multispree_list .detail .text {
+  padding: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003147}}
+.act_multispree_list .arrow {
+  position: relative;
+  top: -18px;
+  margin-left: 45px;
+  width: 18px;
+  height: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003126}}
+.act_multispree_list .arrow:after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url(../img/bg_sprites.png) no-repeat;
+  background-size: 78px auto;
+  background-position: -42px -33px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003153}}
+.act_multispree_list .inner {
+  padding-bottom: 2px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003154}}
+.act_multispree_list .detail {
+  top: 138px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003155}}
+.act_multispree_list .arrow {
+  top: -45px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003156}}
+.act_multispree_list img {
+  height: 73px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003159}}
+.act_icon_plus {
+  width: 25px;
+  height: 25px;
+  margin: 10px auto;
+  position: relative;
+  overflow: hidden;
+  text-indent: -999px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003161}}
+.act_icon_plus:before,
+.act_icon_plus:after {
+  content: "";
+  background-color: #ddd;
+  position: absolute;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003162}}
+.act_icon_plus:before {
+  width: 5px;
+  height: 100%;
+  top: 0;
+  left: 50%;
+  margin-left: -2.5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003163}}
+.act_icon_plus:after {
+  width: 100%;
+  height: 5px;
+  top: 50%;
+  left: 0;
+  margin-top: -2.5px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003166}}
+.act_bigspree {
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003169}}
+.act_bigspree .name {
+  width: 100%;
+  height: 22px;
+  line-height: 22px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background-color: #EEE;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003170}}
+.act_bigspree img {
+  width: 298px;
+  height: 112px;
+  border: 1px solid #e6e6e6;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003173}}
+.act_bigspree .detail_wrap {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003174}}
+.act_bigspree .detail {
+  position: absolute;
+  top: 85px;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  white-space: normal;
+  background-color: #666;
+  color: #FFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 3px #444;
+  top: 144px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003121}}
+.act_bigspree .detail .text {
+  padding: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003175}}
+.act_bigspree .arrow {
+  position: relative;
+  top: -18px;
+  margin-left: 45px;
+  width: 18px;
+  height: 0;
+  top: 1px;
+  left: 50%;
+  margin-left: -9px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003126}}
+.act_bigspree .arrow:after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background: url(../img/bg_sprites.png) no-repeat;
+  background-size: 78px auto;
+  background-position: -42px -33px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003179}}
+.actBtn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  position: relative;
+  background: #e80f18;
+  background: -webkit-linear-gradient(top, #e80f18 0%, #dc0810 44%, #cc0000 100%);
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff8cf;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 0 #9D0004;
+  box-shadow: 0 2px 0 #9D0004;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003188}}
+.actBtn .step {
+  color: #ff5353;
+  position: absolute;
+  left: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003191}}
+.act_btn,
+.act_subbtn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  position: relative;
+  background: #e80f18;
+  background: -webkit-linear-gradient(top, #e80f18 0%, #dc0810 44%, #cc0000 100%);
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff8cf;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 0 #9D0004;
+  box-shadow: 0 2px 0 #9D0004;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003188}}
+.act_btn .step,
+.act_subbtn .step {
+  color: #ff5353;
+  position: absolute;
+  left: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003193}}
+.act_subbtn {
+  background: #a0cb2b;
+  background: -webkit-linear-gradient(top, #a0cb2b 0%, #99c426 44%, #93be21 100%);
+  color: #fffdf2;
+  -webkit-box-shadow: 0 2px 0 #699430;
+  box-shadow: 0 2px 0 #699430;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003197}}
+.act_subbtn .step {
+  color: #c3f149;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003199}}
+.act_inlinebtn {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  position: relative;
+  background: #e80f18;
+  background: -webkit-linear-gradient(top, #e80f18 0%, #dc0810 44%, #cc0000 100%);
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  color: #fff8cf;
+  font-size: 18px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 2px 0 #9D0004;
+  box-shadow: 0 2px 0 #9D0004;
+  display: inline-block;
+  width: auto;
+  padding: 0 10px;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003188}}
+.act_inlinebtn .step {
+  color: #ff5353;
+  position: absolute;
+  left: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003205}}
+.mod_btn_vip,
+.mod_btn_vip_em,
+.mod_btn_yearvip,
+.mod_btn_yearvip_em,
+.mod_btn_xf,
+.mod_btn_xf_em,
+.mod_btn_yearxf,
+.mod_btn_yearxf_em {
+  display: inline-block;
+  height: 28px;
+  width: auto;
+  line-height: 28px;
+  padding: 0 10px 0 26px;
+  font-size: 14px;
+  color: #fff8cf;
+  background: #e80f18;
+  background: -webkit-linear-gradient(top, #e80f18 0%, #dc0810 44%, #cc0000 100%);
+  border-radius: 8px;
+  -webkit-box-shadow: 0 2px 0 #9D0004;
+  box-shadow: 0 2px 0 #9D0004;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003221}}
+.mod_btn_vip:hover,
+.mod_btn_vip_em:hover,
+.mod_btn_yearvip:hover,
+.mod_btn_yearvip_em:hover,
+.mod_btn_xf:hover,
+.mod_btn_xf_em:hover,
+.mod_btn_yearxf:hover,
+.mod_btn_yearxf_em:hover {
+  background-position: 0 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003222}}
+.mod_btn_vip:before,
+.mod_btn_vip_em:before,
+.mod_btn_yearvip:before,
+.mod_btn_yearvip_em:before,
+.mod_btn_xf:before,
+.mod_btn_xf_em:before,
+.mod_btn_yearxf:before,
+.mod_btn_yearxf_em:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  width: 12px;
+  height: 15px;
+  margin-top: -8px;
+  background: url(../img/bg_sprites.png) no-repeat;
+  background-size: 78px auto;
+  background-position: 0 -33px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003233}}
+.act_img_list {
+  overflow-x: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003236}}
+.act_img_list ul {
+  font-size: 0px;
+  letter-spacing: -3px;
+  white-space: nowrap;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\0000349}}
+.act_img_list ul li {
+  font-size: 14px;
+  letter-spacing: 0;
+  display: inline-block;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003237}}
+.act_img_list li {
+  width: 114px;
+  margin-right: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003238}}
+.act_img_list li:last-child {
+  margin-right: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003239}}
+.act_img_list img {
+  width: 114px;
+  height: 64px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003244}}
+.act_text_list li {
+  height: 30px;
+  line-height: 30px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003245}}
+.act_text_list a {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333333;
+  text-decoration: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003250}}
+.act_select_list li {
+  margin-bottom: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003251}}
+.act_select_list li:last-child {
+  margin-bottom: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003252}}
+.act_select_list label {
+  display: block;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003253}}
+.act_select_list input[type=checkbox],
+.act_select_list input[type=radio] {
+  position: absolute;
+  top: 5px;
+  left: 0px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003254}}
+.act_select_list p {
+  padding-left: 18px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003259}}
+.mod_st {
+  min-width: 320px;
+  background: none;
+  height: 43px;
+  line-height: 43px;
+  width: 320px;
+  margin: 0 auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003260}}
+.mod_st_main {
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  background: -webkit-linear-gradient(top, #ffffff 0%, #fcfcfc 44%, #f7f7f7 100%);
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003264}}
+.mod_st_nav,
+.mod_st_userinfo .mod_st_btn {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003266}}
+.mod_st_main .mod_st_userinfo {
+  position: static;
+  width: 115px;
+  height: 100%;
+  float: right;
+  text-align: right;
+  padding-right: 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003267}}
+.mod_st_main .mod_st_logo {
+  background: url(../img/bg_sprites.png) no-repeat;
+  background-size: 78px auto;
+  width: 78px;
+  height: 32px;
+  left: 10px;
+  top: 50%;
+  margin-top: -16px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003272}}
+.mod_st a {
+  color: #cc0000;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003273}}
+.mod_st_main .mod_st_userinfo .user_nick {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003276}}
+.act_banner {
+  border: 1px solid #aaa;
+  border-left: none;
+  border-right: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003278}}
+.act_banner img {
+  width: 320px;
+  height: 150px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003282}}
+.act_video {
+  position: relative;
+  top: -36px;
+  height: 0;
+  -webkit-transition: height 250ms ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003286}}
+.act_video .header {
+  height: 35px;
+  line-height: 35px;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding-left: 28px;
+  margin-bottom: 1px;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003292}}
+.act_video .header:before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  width: 13px;
+  height: 12px;
+  margin-top: -6px;
+  background: url(../img/bg_sprites.png) no-repeat;
+  background-size: 78px auto;
+  background-position: -26px -33px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003299}}
+.act_video img,
+.act_video .player {
+  width: 320px;
+  height: 0;
+  -webkit-transition: height 250ms ease;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003301}}
+.act_video.show {
+  height: 224px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003303}}
+.act_video.show img,
+.act_video.show .player {
+  height: 225px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003308}}
+.act_lottery img {
+  width: 300px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003311}}
+.act_rule {
+  line-height: 24px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003314}}
+.act_intro_img,
+.act_intro_video {
+  margin-top: 15px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003315}}
+.act_intro_video img {
+  width: 300px;
+  height: 225px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003317}}
+.mod_copyright,
+.mod_copyright a {
+  color: #777777;
+  font-size: 12px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/phone\.less}line{font-family:\00003318}}
+.mod_copyright p:first-child {
+  display: none;
+}
+/*弹窗样式 start*/
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\000032}}
+.mod_pop_mask {
+  z-index: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\000033}}
+.mod_pop_gd_v3 {
+  width: 320px;
+  height: 100%;
+  left: 50%;
+  margin-left: -160px;
+  position: absolute;
+  z-index: 2;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000311}}
+.mod_pop_gd_v3 .mod_pop_wrap {
+  margin: 0;
+  width: auto!important;
+  top: 0;
+  font-size: 14px;
+  background: #FFF7D9;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000318}}
+.mod_pop_gd_v3 .mod_pop_gd_bd {
+  padding: 15px 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000319}}
+.mod_pop_gd_v3 .mod_pop_gd_ft {
+  height: 35px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000320}}
+.mod_pop_gd_v3 .info_alert {
+  background: none;
+  padding-left: 0px;
+  color: #999999;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000321}}
+.mod_pop_gd_v3 .mod_pop_gd_ft {
+  margin: 0 10px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000322}}
+.mod_pop_gd_v3 .mod_pop_gd_hd button {
+  margin: 9px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000323}}
+.mod_pop_gd_v3 fieldset {
+  border: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000327}}
+.mod_pay_tabs,
+.mod_pay_tabs ul,
+.mod_pay_con {
+  width: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000331}}
+.mod_pay_tabs ul {
+  display: -webkit-box;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000332}}
+.mod_pay_tabs ul li {
+  display: block;
+  -webkit-box-flex: 1;
+  float: inherit;
+  width: auto;
+  margin-right: 0;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000340}}
+.mod_pay_tabs ul li:hover:after,
+.mod_pay_tabs .mod_tabs_current:after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: #FFFDEF;
+  border-left: 1px solid #E3D7A9;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000351}}
+.mod_pay_tabs ul li a {
+  border-right: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000353}}
+.pay_mod_xiaoq {
+  display: none;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000354}}
+.mod_pop_gd_bd .btn {
+  text-align: center;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000356}}
+.pay_mod_infomain {
+  margin-left: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000359}}
+.pay_mod_infomain .payfrom,
+.pay_mod_infomain h2 {
+  font-size: 14px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/E\:\/imgcache\/vipstyle\/game\/portal\/response\/v1\/less\/lib\/phone_pop\.less}line{font-family:\0000363}}
+.mod_pay_number,
+.mod_pay_time {
+  margin-left: 0;
+}
+/*弹窗样式 end*/

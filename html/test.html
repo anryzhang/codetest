@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var testModule = (function(){
+        var counter = 0 ;
+        return{
+            incre:function(){
+                return counter++;
+            },
+            reset:function(){
+                console.log('value to reset: ' + counter);
+                counter = 0;
+            }
+        }
+    })();
+    console.log(testModule);
+    testModule.incre();
+    testModule.reset();
+</script>
+</body>
+</html>

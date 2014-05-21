@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script src="http://code.angularjs.org/angular-1.0.1.min.js"></script>
+    <script src="template.js"></script>
+</head>
+<body>
+<div>
+    <label>Name:</label>
+    <input type="text" ng-model="yourName" placeholder="Enter a name here">
+    <hr>
+    <h1>Hello, {{yourName}}!</h1>
+
+    <div id="content">
+
+    </div>
+
+    <script id="test" type="text/html">
+        <% if(isAdmin) { %>
+        <h1><%=title%></h1>
+        <ul>
+            <%for(i = 0;i < list.length; i++){%>
+                <li>条目内容<%=i + 1%> : <%=list[i]%></li>
+            <%}%>
+        </ul>
+        <%}%>
+    </script>
+    <script>
+
+        var data = {
+            title: '基本例子',
+            isAdmin: true,
+            list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+        };
+        var html = template.render('test', data);
+        document.getElementById('content').innerHTML = html;
+
+    </script>
+</div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.js"></script>
+</head>
+<body >
+<div class="ng-cloak" ng-controller="testA">
+    hello {{name}}
+    <input type="button" value="doIt" ng-click="doIt()">
+    <script>
+        function testA($scope){
+            $scope.name = 'kitty';
+            $scope.doIt = function(){
+                $scope.name = 'anry';
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

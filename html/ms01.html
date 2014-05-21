@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>闭包演示</title>
+    <style type="text/css">
+        p {background:gold;}
+    </style>
+
+</head>
+<body >
+<p>产品 0</p>
+<p>产品 1</p>
+<p>产品 2</p>
+<p>产品 3</p>
+<p>产品 4</p>
+<script type="text/javascript">
+    (function T(){
+        var idx = 0;
+        var p = document.getElementsByTagName('p');
+        console.log(p);
+        for(var i = 0; i< p.length;i++){
+
+            var op = p[i];
+            op.onclick = function(){
+                idx++;
+                console.log(idx);
+            }
+
+        }
+    })();
+</script>
+</body>
+</html> 

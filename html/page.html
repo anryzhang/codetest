@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+
+    <title>RoseJS演示</title>
+    <style>
+        .RU-pagebar{ font-family:Verdana; font-size:13px;}
+        .RU-pagebar a,.RU-pagebar span{ padding:5px 8px; border:1px solid #ddd; background:#ebebeb; margin-right:10px; text-decoration:none; color:#383838;}
+        .RU-pagebar .RU-pagenow{ padding:5px 8px; border:1px solid #009dd7; margin-right:10px; background:#00b2f4; color:#fff;}
+        .RU-pagebar .RU-pagedisabled{ color:#bbb; background:#eee}
+    </style>
+</head>
+<body>
+
+请输入总页数：<input type="text" id="PageCount" value="10"><br>
+请输入起始页：<input type="text" id="CurrentPage" value="1"><br>
+请输入翻页显示个数:<input type="text" id="SingleCount" value="7"><br>
+
+<a href="javascript:void(0)" onClick="creatPageBar();">生成翻页啦!</a><br><br><br>
+<br>
+<br>
+
+
+<div id="RJ-pagebar" class="RU-pagebar"></div><br>
+<br>
+<br>
+<div id="mark"></div>
+
+</body>
+
+</html>
+<style>
+    body{
+    margin:50px;
+    background-color:#ffffff;
+}
+.content{
+    display:inline-block;
+    width:350px;
+    height:239px;
+    margin-right:-4px;
+}
+.play{
+    cursor:pointer;
+    background-color:#060;
+}
+div>div{
+    display:block;
+    height:20px;
+}
+div>div>div{
+    width:16px;
+    height:16px;
+    background-color:#FFF;
+    display:inline-block;
+    float:right;
+    margin:2px;
+}
+</style>
+<script>
+    function RJ_Pagebar(opt){
+    if(!opt.id){ return false};
+    if(!opt.PageCount){return false};
+    var _obj = document.getElementById(opt.id);
+    var _cp = parseInt(opt.CurrentPage)>parseInt(opt.PageCount)?1:parseInt(opt.CurrentPage)||1;
+    var _sc = parseInt(opt.SingleCount)>parseInt(opt.PageCount)?7:parseInt(opt.SingleCount)||7;
+    var _pc = parseInt(opt.PageCount);
+    if(_sc%2==0){_sc=_sc-1};
+    var callback = opt.callback || function(){};
+
+    if(_cp!=1)
+    {
+        var oA=document.createElement('a');
+        oA.href="#"+(_cp-1);
+        oA.innerHTML="上一页";
+        _obj.appendChild(oA);
+    }
+    else
+    {
+        var oS=document.createElement('span');
+        oS.className="RU-pagedisabled";
+        oS.innerHTML="上一页";
+        _obj.appendChild(oS);
+    }
+
+    if(_cp<=(_sc-1)/2)
+    {
+        for(i=1;i<=_sc;i++)
+        {
+            if(i==_cp)
+            {
+                var oS=document.createElement('span');
+                oS.className='RU-pagenow';
+                oS.innerHTML=i.toString().length==1?"0"+i:i;
+                _obj.appendChild(oS);
+            }
+            else
+            {
+                var oA=document.createElement('a');
+                oA.href="#"+i;
+                oA.innerHTML=i.toString().length==1?"0"+i:i;
+                _obj.appendChild(oA);
+            }
+        }
+        var oS=document.createElement('span');
+        oS.innerHTML="…";
+        _obj.appendChild(oS);
+    }
+    else if(_cp<=_pc&&_cp>=_pc-(_sc-1)/2)
+    {
+        var oS=document.createElement('span');
+        oS.innerHTML="…";
+        _obj.appendChild(oS);
+        for(i=_pc-_sc+1;i<=_pc;i++)
+        {
+            if(i==_cp)
+            {
+                var oS=document.createElement('span');
+                oS.className='RU-pagenow';
+                oS.innerHTML=i.toString().length==1?"0"+i:i;
+                _obj.appendChild(oS);
+            }
+            else
+            {
+                var oA=document.createElement('a');
+                oA.href="#"+i;
+                oA.innerHTML=i.toString().length==1?"0"+i:i;
+                _obj.appendChild(oA);
+            }
+        }
+    }
+    else
+    {
+        var oS=document.createElement('span');
+        oS.innerHTML="…";
+        _obj.appendChild(oS);
+
+        for(i=_cp-(_sc-1)/2;i<(parseInt(_cp)+parseInt(_sc)-(_sc-1)/2);i++)
+        {
+            if(i==_cp)
+            {
+                var oS=document.createElement('span');
+                oS.className='RU-pagenow';
+                oS.innerHTML=i.toString().length==1?"0"+i:i;
+                _obj.appendChild(oS);
+            }
+            else
+            {
+                var oA=document.createElement('a');
+                oA.href="#"+i;
+                oA.innerHTML=i.toString().length==1?"0"+i:i;
+                _obj.appendChild(oA);
+            }
+        }
+        var oS=document.createElement('span');
+        oS.innerHTML="…";
+        _obj.appendChild(oS);
+    }
+
+    if(_cp!=_pc)
+    {
+        var oA=document.createElement('a');
+        oA.href="#"+(_cp+1);
+        oA.innerHTML="下一页";
+        _obj.appendChild(oA);
+    }
+    else
+    {
+        var oS=document.createElement('span');
+        oS.className="RU-pagedisabled";
+        oS.innerHTML="下一页";
+        _obj.appendChild(oS);
+    }
+
+    callback(_cp,_pc);
+
+    var cA=_obj.getElementsByTagName('a');
+    for (var i=0;i<cA.length;i++)
+    {
+        cA[i].onclick=function(){
+            var pagenum=parseInt(this.getAttribute('href').substring(1));
+            _obj.innerHTML="";
+            RJ_Pagebar({
+                id:opt.id, //容器ID : 必选参数
+                CurrentPage:pagenum,   //当前页 ： 可选参数，默认值为1
+                SingleCount:opt.SingleCount,   //显示数目： 可选参数，只能为奇数，默认值为7，
+                PageCount:opt.PageCount,   //必选参数
+                callback:callback
+            })
+            return false;
+        }
+    }
+}
+</script>
+<script>
+    function  creatPageBar()
+    {
+        var RJPageBar=document.getElementById('RJ-pagebar');
+        var CurrentPage=document.getElementById('CurrentPage').value;
+        var SingleCount=document.getElementById('SingleCount').value;
+        var PageCount=document.getElementById('PageCount').value;
+        var mark=document.getElementById('mark');
+        RJPageBar.innerHTML="";
+        RJ_Pagebar({
+            id:'RJ-pagebar', //容器ID : 必选参数
+            CurrentPage:CurrentPage,   //当前页 ： 可选参数，默认值为1
+            SingleCount:SingleCount,   //显示数目： 可选参数，只能为奇数，默认值为7，
+            PageCount:PageCount,   //必选参数
+            callback : function(pagenow,pagecount){
+                mark.innerHTML='当前页:' + pagenow +',总共页:'+pagecount;
+            }
+        })
+    }
+
+    window.load = creatPageBar();
+</script>
+<!-- Generated by RunJS (Mon Apr 28 14:45:33 CST 2014) 1ms -->
+</body>
+</html>

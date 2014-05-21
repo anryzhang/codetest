@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
+</head>
+<body>
+<script>
+    /*
+    * 插入排序
+    * 所谓的插入排序，就是将序列中的第一个元素看成一个有序的子序列，然后不段向后比较交换比较交换。
+    * */
+    function insertSort(arr){
+        var key;
+        for(var j = 1; j < arr.length;j++){
+            var i = j-1;
+            key = arr[j];
+            while(i>=0 && arr[i]>key){
+                arr[i+1]=arr[i];
+                i--;
+            }
+            arr[i+1] = key;
+        }
+        return arr;
+    }
+    var a = [2,3,1,4,3,5];
+    console.log(insertSort(a));
+    //console.log(a.sort());
+</script>
+</body>
+</html>

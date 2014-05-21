@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+
+</head>
+<body>
+<div id="J_t"></div>
+<input type="text" readonly="true"/>
+<script>
+    //module 模式基础用法
+    var model = (function(){
+        return{
+            //暴露public方法
+            add:function(eleId,x,y){
+                var ele = document.getElementById(eleId);
+                var val = x + y;
+                console.log(val);
+               ele.innerHTML = val;
+            }
+        }
+    })();
+
+
+    function extend(b,s){
+        for(var p in s){
+            b[p] = s[p];
+        }
+        return b;
+    }
+    window.tt = window.tt || {};
+    extend(window.tt,model);
+
+    window.tt.add('J_t',2,3);
+    //module 完整用法
+
+    var moduleAll = (function(){
+        var my = {}, defaultName = 'anry test';
+        function AddDate(data){
+            console.log(data);
+            return data;
+        }
+        my.Name = defaultName;
+        my.AddTDate = function(data){
+            AddDate(data);
+        };
+
+        return my;
+    })();
+
+
+    extend(window.tt,moduleAll);
+    console.log(window.tt);
+    window.tt.AddTDate(3);
+</script>
+
+</body>
+</html>

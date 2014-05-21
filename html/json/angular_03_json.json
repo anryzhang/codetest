@@ -1,0 +1,15 @@
+{
+    "list":[{
+        "id": 0,
+        "name": "alibaba",
+        "parentId": -1,
+        "type": "ORG_COMP",
+        "headId": "7"
+    },
+    {
+    "id": 10,
+    "name": "测试部门部门10",
+    "parentId": 0,
+    "type": "ORG_DEPT"
+    }]
+}

@@ -1,0 +1,787 @@
+@charset "utf-8";
+.mod_vip_em, .mod_yearvip_em, .mod_vip, .mod_yearvip, .mod_xf_em, .mod_yearxf_em, .mod_xf, .mod_yearxf, .mod_yearsj, .mod_yearsj_em {
+    overflow: hidden;
+    display: inline-block;
+    background-image: url(http://imgcache.qq.com/vipstyle/global/img/bg_btn_vip.png);
+    background-repeat: no-repeat;
+    line-height: 200px
+}
+
+.mod_vip {
+    width: 76px;
+    height: 18px;
+    background-position: 0 -80px
+}
+
+.mod_vip:hover {
+    background-position: 0 -100px
+}
+
+.mod_vip_em {
+    width: 133px;
+    height: 35px;
+    background-position: 0 0
+}
+
+.mod_vip_em:hover {
+    background-position: 0 -40px
+}
+
+.mod_yearvip {
+    width: 101px;
+    height: 18px;
+    background-position: -140px -80px
+}
+
+.mod_yearvip:hover {
+    background-position: -140px -100px
+}
+
+.mod_yearvip_em {
+    width: 175px;
+    height: 35px;
+    background-position: -140px 0
+}
+
+.mod_yearvip_em:hover {
+    background-position: -140px -40px
+}
+
+.mod_xf {
+    width: 76px;
+    height: 18px;
+    background-position: -320px -80px
+}
+
+.mod_xf:hover {
+    background-position: -320px -100px
+}
+
+.mod_xf_em {
+    width: 133px;
+    height: 35px;
+    background-position: -320px 0
+}
+
+.mod_xf_em:hover {
+    background-position: -320px -40px
+}
+
+.mod_yearxf {
+    width: 101px;
+    height: 18px;
+    background-position: -460px -80px
+}
+
+.mod_yearxf:hover {
+    background-position: -460px -100px
+}
+
+.mod_yearxf_em {
+    width: 175px;
+    height: 35px;
+    background-position: -460px 0
+}
+
+.mod_yearxf_em:hover {
+    background-position: -460px -40px
+}
+
+.mod_yearsj {
+    width: 99px;
+    height: 18px;
+    background-position: -642px -80px
+}
+
+.mod_yearsj:hover {
+    background-position: -642px -100px
+}
+
+.mod_yearsj_em {
+    width: 178px;
+    height: 34px;
+    background-position: -642px 0
+}
+
+.mod_yearsj_em:hover {
+    background-position: -642px -40px
+}
+
+@charset "utf-8";
+.mod_pop_gd_v3 {
+    overflow: visible;
+    position: fixed;
+    _position: absolute;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0
+}
+
+.mod_pop_gd_v3 .mod_pop_wrap {
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+    border: 2px solid #E1E1E1;
+    background-color: #FFF;
+    color: #595959;
+    text-align: left
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_hd, .mod_pop_gd_v3 .mod_pop_gd_hd button {
+    background: url(http://imgcache.qq.com/vipstyle/global/img/bg_pop_v2.png) repeat-x
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_hd {
+    overflow: hidden;
+    height: 27px;
+    background-color: #EFEFEF;
+    line-height: 27px
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_hd h3 {
+    display: inline;
+    float: left;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 400
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_hd button {
+    cursor: pointer;
+    float: right;
+    margin: 8px 10px 0 0;
+    padding: 0;
+    width: 10px;
+    height: 9px;
+    background-position: 0 -28px;
+    text-indent: -999em
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_bd {
+    padding: 30px
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_bd h4 {
+    padding-bottom: 3px;
+    font-size: 14px
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_bd .single_row {
+    padding-top: 12px
+}
+
+.mod_pop_gd_v3 .info_success, .mod_pop_gd_v3 .info_error, .mod_pop_gd_v3 .info_alert {
+    padding-left: 70px;
+    height: auto !important;
+    height: 50px;
+    min-height: 50px
+}
+
+.mod_pop_gd_v3 .info_success {
+    background: url(http://imgcache.qq.com/vipstyle/global/img/ico_success.png) no-repeat -6px -5px
+}
+
+.mod_pop_gd_v3 .info_error {
+    background: url(http://imgcache.qq.com/vipstyle/global/img/ico_error.png) no-repeat -6px -5px
+}
+
+.mod_pop_gd_v3 .info_alert {
+    background: url(http://imgcache.qq.com/vipstyle/global/img/ico_tip.png) no-repeat -6px -5px
+}
+
+.mod_pop_gd_v3 .mod_hint_gb {
+    margin-top: 20px
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_ft {
+    overflow: hidden;
+    padding: 6px 0;
+    height: 23px;
+    background-color: #F3F3F3;
+    text-align: center
+}
+
+.mod_pop_gd_v3 .mod_pop_btn1, .mod_pop_gd_v3 .mod_pop_btn2, .mod_pop_gd_v3 .mod_pop_btn3 {
+    margin: 0 5px
+}
+
+.mod_pop_gd_v3 .mod_pop_btn1, .mod_pop_gd_v3 .mod_pop_btn2, .mod_pop_gd_v3 .mod_pop_btn3 {
+    display: inline-block
+}
+
+.mod_pop_gd_v3 .mod_pop_btn1 span, .mod_pop_gd_v3 .mod_pop_btn2 span, .mod_pop_gd_v3 .mod_pop_btn3 span {
+    float: left
+}
+
+.mod_pop_gd_v3 .mod_pop_btn1, .mod_pop_gd_v3 .mod_pop_btn1 span, .mod_pop_gd_v3 .mod_pop_btn2, .mod_pop_gd_v3 .mod_pop_btn2 span, .mod_pop_gd_v3 .mod_pop_btn3, .mod_pop_gd_v3 .mod_pop_btn3 span {
+    cursor: pointer;
+    overflow: hidden;
+    height: 23px;
+    background-color: #FFF;
+    background-image: url(http://imgcache.qq.com/vipstyle/global/img/bg_pop_v2.png);
+    line-height: 23px;
+    *line-height: 25px;
+    white-space: nowrap
+}
+
+.mod_pop_gd_v3 .mod_pop_btn1 {
+    padding-left: 10px;
+    background-position: -40px -100px;
+    text-decoration: none;
+    color: #FFF
+}
+
+.mod_pop_gd_v3 .mod_pop_btn1 span {
+    padding-right: 10px;
+    background-position: 100% -100px
+}
+
+.mod_pop_gd_v3 .mod_pop_btn2 {
+    padding-left: 10px;
+    background-position: -40px -28px;
+    color: #325E7F;
+    text-decoration: none
+}
+
+.mod_pop_gd_v3 .mod_pop_btn2 span {
+    padding-right: 10px;
+    background-position: 100% -28px
+}
+
+.mod_pop_gd_v3 .mod_pop_btn3 {
+    cursor: default;
+    padding-left: 10px;
+    background-position: -40px -76px;
+    text-decoration: none;
+    color: #B5B5B5
+}
+
+.mod_pop_gd_v3 .mod_pop_btn3 span {
+    cursor: default;
+    padding-right: 10px;
+    background-position: 100% -76px
+}
+
+.mod_pop_mask {
+    position: fixed;
+    _position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .5;
+    filter: alpha(opacity=50)
+}
+
+#iframe_mask {
+    position: fixed;
+    _position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 997;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=0)
+}
+
+@charset "utf-8";
+.mod_pay_tabs {
+    width: 419px;
+    _width: 418px;
+    height: 29px;
+    overflow: hidden;
+    border-right: 1px solid #e5e5e5
+}
+
+.mod_pay_tabs ul {
+    width: 430px
+}
+
+.mod_pay_tabs ul li {
+    float: left;
+    width: 142px;
+    margin-right: -1px;
+    text-align: center
+}
+
+.mod_pay_tabs ul li a {
+    display: block;
+    background: url('../img/bg_pop_v3.png') repeat-x 0 1px;
+    border: 1px solid #e5e5e5;
+    height: 27px;
+    line-height: 27px;
+    padding-left: 1px;
+    font-weight: 700;
+    cursor: pointer
+}
+
+.mod_pay_tabs ul li a:hover, .mod_pay_tabs ul .mod_tabs_current a {
+    background: #fff none;
+    background: -moz-linear-gradient(center top, #e5e5e5 0, #fff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(#e5e5e5), to(#fff));
+    color: #595959;
+    border-top: 1px solid #cd0000;
+    border-bottom: 0 none
+}
+
+.mod_pay_tabs ul li a:hover, .mod_pay_tabs ul li a:active {
+    text-decoration: none
+}
+
+.mod_pay_con {
+    padding: 10px 20px;
+    border: 1px solid #e5e5e5;
+    border-top: 0 none
+}
+
+.mod_pay_con legend {
+    display: none
+}
+
+.mod_pay_con p {
+    padding-bottom: 5px
+}
+
+.mod_pay_con input {
+    vertical-align: middle;
+    _vertical-align: baseline
+}
+
+.mod_pay_con .hot {
+    color: #ad0000;
+    font-weight: 700
+}
+
+.mod_pay_amount {
+    padding-left: 146px
+}
+
+.mod_pay_amount strong {
+    color: #cd0000;
+    font-weight: 400
+}
+
+.mod_pay_qb label, .mod_pay_tenpay label, .mod_pay_number label, .mod_pay_account {
+    display: block;
+    padding-bottom: 5px
+}
+
+.mod_pay_bank label {
+    word-break: keep-all;
+    white-space: nowrap
+}
+
+.mod_pay_bank h4 {
+    font-size: 14px;
+    margin: 5px 0 3px
+}
+
+.mod_pay_input {
+    height: 20px;
+    _height: 22px;
+    border: 1px solid #cdcdcd
+}
+
+.mod_pay_number, .mod_pay_time {
+    display: block;
+    clear: both;
+    width: 300px;
+    margin: 0 auto 15px
+}
+
+.mod_pay_number legend, .mod_pay_time legend {
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 0 0 -7px;
+    padding: 5px 0 3px;
+    color: #454545
+}
+
+.mod_pay_time .mod_pay_input {
+    width: 30px
+}
+
+.select_fri {
+    position: absolute;
+    right: 50px;
+    top: 72px
+}
+
+.pay_friend .mod_pay_number, .pay_friend .mod_pay_time {
+    width: 365px
+}
+
+.fri_list, .fri_list span {
+    background: url('../img/bg_pop_v3.png');
+    background-color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    height: 23px;
+    line-height: 23px;
+    overflow: hidden;
+    white-space: nowrap;
+    background-position: -40px -130px;
+    color: #325E7F;
+    padding-left: 20px;
+    text-decoration: none;
+    vertical-align: top
+}
+
+.fri_list span {
+    background-position: 100% -130px;
+    padding-right: 10px;
+    padding-left: 0
+}
+
+.mod_selectfriend_single_without_tab {
+    width: 243px;
+    right: -117px;
+    top: 46px
+}
+
+.mod_selectfriend_list_friends {
+    background-color: #fff
+}
+
+.mod_selectfriend_single_without_tab .mod_selectfriend_search, .mod_selectfriend_single_without_tab .mod_selectfriend_list_friends_selected, .mod_selectfriend_single_without_tab .mod_selectfriend_panel, .mod_selectfriend_single_without_tab .mod_selectfriend_groupselect {
+    display: none
+}
+
+.mod_selectfriend_list_friends {
+    position: relative;
+    width: 234px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    text-align: left;
+    margin: 0 auto;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px
+}
+
+.mod_selectfriend_tab {
+    background: url('../img/bg_pop_v3.png') repeat-x scroll 0 1px transparent;
+    height: 29px;
+    font-size: 12px;
+    border: 1px solid #E5E5E5
+}
+
+.mod_selectfriend_tab .mod_selectfriend_tab_current {
+    padding: 7px 0 0 10px;
+    font-weight: 700
+}
+
+.mod_selectfriend_list {
+    height: 262px;
+    overflow-y: scroll
+}
+
+.mod_selectfriend_list ul {
+    padding: 5px 0;
+    width: 217px;
+    overflow: hidden
+}
+
+.mod_selectfriend_list ul li {
+    line-height: 22px;
+    zoom: 1
+}
+
+.mod_selectfriend_list ul li a {
+    display: block;
+    background: url('../img/bg_friends.png') no-repeat 15px -118px;
+    padding-left: 30px;
+    width: 187px;
+    _width: 217px;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis
+}
+
+.mod_selectfriend_list ul .mod_selectfriend_group_selected a {
+    background: url('../img/bg_friends.png') no-repeat 15px -145px;
+    cursor: pointer
+}
+
+.mod_selectfriend_list ul li a:hover {
+    background-color: #f2f2f2
+}
+
+.mod_selectfriend_list ul ul {
+    padding: 0;
+    margin-bottom: 3px
+}
+
+.mod_selectfriend_list ul ul li a {
+    background: url('../img/bg_friends.png') no-repeat 30px -167px;
+    padding-left: 50px;
+    width: 167px;
+    _width: 217px;
+    min-height: 20px;
+    _height: 20px
+}
+
+.mod_selectfriend_list ul ul .mod_selectfriend_friend_selected a, .mod_selectfriend_list ul ul .mod_selectfriend_friend_selected a:hover {
+    background-color: #f2f2f2
+}
+
+.mod_selectfriend_list ul ul li a.is_vip {
+    background-position: 30px -187px;
+    color: #cd0000
+}
+
+.mod_selectfriend_list ul ul li a:hover {
+    background-color: #f6f6f6
+}
+
+.mod_selectfriend_search_notice {
+    position: absolute;
+    top: 8px;
+    right: 20px
+}
+
+.mod_selectfriend_search_notice button {
+    background: none;
+    color: #325e7f;
+    cursor: pointer
+}
+
+.mod_selectfriend .btn_closed {
+    background: none repeat scroll 0 0 transparent;
+    color: #4E637E;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    width: 15px;
+    height: 15px;
+    z-index: 10
+}
+
+.collect li {
+    float: left;
+    width: 90px;
+    padding-top: 10px;
+    text-align: center;
+    background-repeat: no-repeat
+}
+
+.card_pic {
+    display: block;
+    width: 90px;
+    height: 70px;
+    background-repeat: no-repeat
+}
+
+.card_pic span {
+    display: none
+}
+
+.card_1 {
+    background-position: 15px -105px
+}
+
+.card_1_ok {
+    background-position: 15px 0
+}
+
+.card_2 {
+    background-position: -68px -105px
+}
+
+.card_2_ok {
+    background-position: -68px 0
+}
+
+.card_3 {
+    background-position: -151px -105px
+}
+
+.card_3_ok {
+    background-position: -151px 0
+}
+
+.card_4 {
+    background-position: -234px -105px
+}
+
+.card_4_ok {
+    background-position: -234px 0
+}
+
+.card_5 {
+    background-position: -317px -105px
+}
+
+.card_5_ok {
+    background-position: -317px 0
+}
+
+.card_6 {
+    background-position: -400px -105px
+}
+
+.card_6_ok {
+    background-position: -400px 0
+}
+
+.card_show {
+    text-align: center
+}
+
+.card_show .card_pic {
+    margin: 0 auto
+}
+
+.mod_pop_gd_v3 .mod_pop_wrap {
+    border: 1px solid #c71515;
+    background: #fff7d9 url('../img/bg.png') no-repeat center 39px;
+    overflow: visible
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_hd {
+    height: 39px;
+    line-height: 39px;
+    background: #c71515 url('../img/sprite.png') no-repeat 0 0
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_hd h3 {
+    color: #fff;
+    margin-left: 38px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: "MicroSoft YaHei";
+    line-height: 39px
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_hd button {
+    width: 19px;
+    height: 19px;
+    background: url('../img/sprite.png') no-repeat no-repeat -79px -44px;
+    margin: -1px
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_bd {
+    padding: 15px 20px
+}
+
+.mod_pop_gd_v3 .mod_pop_gd_ft {
+    background: 0;
+    padding: 6px 0 15px
+}
+
+.mod_pay_tabs {
+    border-right: 1px solid #e3d7a9
+}
+
+.mod_pay_tabs ul li a {
+    background: #fff7d9;
+    border: 1px solid #e3d7a9;
+    color: #786448
+}
+
+.mod_pay_tabs ul li a:hover, .mod_pay_tabs ul .mod_tabs_current a {
+    background: #fffdef
+}
+
+.mod_pay_con {
+    background-color: #fffdef;
+    border: 1px solid #e3d7a9;
+    border-top: 0;
+    width: 378px
+}
+
+.mod_pay_con .hot {
+    font-weight: 100
+}
+
+.mod_pay_number legend, .mod_pay_time legend {
+    font-size: 12px;
+    color: #786448
+}
+
+.pay_mod_xiaoq {
+    width: 190px;
+    height: 175px;
+    overflow: hidden;
+    float: left;
+    background: url(../img/xiaoq.png) no-repeat;
+    _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://imgcache.qq.com/vipstyle/vipportal/v1/img/popup/payment/xiaoq.png', sizingMethod='crop');
+    _background: none
+}
+
+.pay_mod_xiaoq .info {
+    width: 100px;
+    margin: 12px 0 0 83px;
+    font-weight: 100;
+    text-align: center;
+    color: #895620;
+    font-size: 12px
+}
+
+.pay_mod_infomain {
+    margin-left: 210px
+}
+
+.pay_mod_infomain h2 {
+    color: #ca1609;
+    font-size: 12px
+}
+
+.pay_mod_infomain h3 {
+    font-size: 12px
+}
+
+.pay_mod_infomain .payfrom {
+    color: #786448;
+    font-size: 12px
+}
+
+.pay_mod_infomain .infolist {
+    width: 220px;
+    margin: 15px -50px 15px 0
+}
+
+.pay_mod_infomain .infolist li {
+    padding: 3px 0
+}
+
+.pay_mod_infomain .infolist .short_text {
+    width: 40px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-left: 5px
+}
+
+.pay_mod_infomain .infolist input {
+    margin-right: 5px
+}
+
+.pay_mod_infomain .details {
+    line-height: 18px;
+    margin: 5px 0
+}
+
+.pay_mod_infomain .photo {
+    display: block;
+    width: 200px;
+    height: 60px;
+    overflow: hidden;
+    border: 1px solid #ecdbb0;
+    margin: 5px -30px 5px 0
+}
+
+.pay_mod_infomain .photo img {
+    display: block
+}
+
+.pay_mod_infomain .btn .btn_fit_em_pop {
+    margin: 0
+}
+
+/*  |xGv00|d064fa802749a02fb5cea8b3e9fbe88a */

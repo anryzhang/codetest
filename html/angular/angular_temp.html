@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.js"></script>
+    <script src="js/a_temp.js"></script>
+    <style>
+        .expander {
+            border: 1px solid black;
+            width: 250px;
+        }
+
+        .expander>.title {
+            background-color: black;
+            color: white;
+            padding: .1em .3em;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body ng-controller="myController">
+    <hello class="expander" expander-title="title">
+        {{text}}
+    </hello>
+
+</body>
+</html>

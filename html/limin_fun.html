@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
+</head>
+<body>
+<a href="">1</a>
+<a href="">2</a>
+<a href="">3</a>
+<a href="">4</a>
+<a href="">5</a>
+<script>
+    var mode = (function(){
+        function init(){
+            console.log(1)
+        }
+        return init();
+    })();
+
+
+    var elems = document.getElementsByTagName('a');
+
+    for (var i = 0; i < elems.length; i++) {
+
+        (function (idx) {
+
+            elems[i].addEventListener('click', function (e) {
+                e.preventDefault();
+                console.log(idx);
+                //alert('I am link #' + idx);
+            });
+
+        })(i);
+
+    }
+</script>
+</body>
+</html>

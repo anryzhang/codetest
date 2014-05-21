@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.js"></script>
+    <style>
+        .test{
+            border:1px solid #008000;
+            background: darkgreen;
+            color:#fff
+        }
+    </style>
+</head>
+<body ng-app>
+<input type="text" ng-model="myclass" placeholder="输入test class,下面也会加上样式">
+<div ng-controller="Test" class="{{myclass}}">
+{{data.name}}
+    你输入了calss {{myclass}}
+</div>
+<article ng-app="cloning">
+
+</article>
+<script>
+function Test($scope){
+    $scope.data={
+        name:"test"
+    }
+}
+</script>
+<script>
+
+</script>
+</body>
+</html>

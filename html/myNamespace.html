@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var myNamespace = (function(){
+       return {
+           myProperty:'someValue',
+           myconfig:{
+               useCach:true,
+               lan:"en"
+           },
+           myMethod:function(){
+               console.log('test myMethod');
+           },
+           myMenthod2:function(){
+               console.log("cach is:"+(this.myconfig.useCach?"enabled":"disabled"));
+           },
+           myMethod3:function(newConfig){
+             if(typeof newConfig === "object"){
+                 this.myconfig = newConfig;
+                 console.log(this.myconfig.lan);
+             }
+           }
+       }
+    })();
+
+    myNamespace.myMenthod2();
+    myNamespace.myMethod3({
+        test:3,
+        lan:4
+    })
+
+</script>
+</body>
+</html>

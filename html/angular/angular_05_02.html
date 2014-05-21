@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html ng-app="myDirective">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="angular.js"></script>
+</head>
+<body ng-controller="myContr">
+<div ng-model="content" contenteditable="true">
+    my title data
+</div>
+<pre>{{content}}</pre>
+<input type="button" ng-click="reset()" value="reset {{content}}"/>
+<script>
+    angular.module('myDirective', [])
+            .directive('contenteditable',function(){
+                return {
+                    require:'ngModel',
+                    link:function(scope,element,attr,ngModel){
+                        function setVal(){
+                            ngModel.$setViewValue(element.text());
+                        }
+                        element.bind('keyup',function(){
+                            scope.$apply(setVal);
+                        });
+                        ngModel.$render = function(val){
+                            console.log("render running");
+                            element.html(val);
+                        };
+                        setVal();
+                    }
+                }
+            })
+            .controller("myContr",function($scope){
+                $scope.reset = function(){
+                    $scope.content = 'my little data';
+                }
+            });
+
+
+
+</script>
+</body>
+</html>

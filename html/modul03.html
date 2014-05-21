@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /*暴露式模块模式*/
+    var myModule = function(){
+        var privateVar = 'ben cherry',
+            publicVar ='hey there';
+        function privateFunction(){
+            console.log('Name:' + privateVar);
+        }
+        function publicSetName(strName){
+            privateVar = strName;
+            console.log(privateVar)
+        }
+        function publicGetName(){
+            privateFunction();
+        }
+        return {
+            setName: publicSetName,
+            greeting:publicVar,
+            getName:publicGetName
+        }
+    }();
+    console.log(myModule);
+    myModule.getName();
+    myModule.setName('anry');
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="angular.js"></script>
+</head>
+<body>
+<div ng-app>
+    <div ng-controller="getJson">
+        <p np-repeat="test in tests.list">
+            {{test}}
+        </p>
+    </div>
+</div>
+<script>
+    function getJson($scope,$http){
+        var HOST = document.location.host;
+        var URL = {
+          getData:'http://'+HOST+'/test/json/angular_03_json.json'
+        };
+        $http.get(URL.getData).success(function(data){
+            $scope.tests = data;
+            console.log($scope.tests);
+        });
+    }
+
+    var Singleton=(function(){
+        var instantiated;
+        function init(){
+            /*这里定义单例代码*/
+            return{
+                publicMethod:function(){
+                    var self = this;
+                    console.log(self.publicProperty + 'helloworld');
+                },
+                publicProperty:'test'
+            };
+        }
+
+        return{
+            getInstance:function(){
+                if(!instantiated){
+                    instantiated=init();
+                }
+                return instantiated;
+            }
+        };
+    })();
+    /*调用公有的方法来获取实例:*/
+   // Singleton.getInstance().publicMethod();
+   var s = Singleton.getInstance().publicProperty;
+           console.log(s)
+</script>
+</body>
+</html>

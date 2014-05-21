@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>拖动</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+
+</head>
+<body>
+<style>
+    #test{
+        margin: 10px;
+        padding: 10px;
+        height: 30px;
+        width: 30px;
+        border: 1px solid #ccc;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: absolute;
+
+
+    }
+    p{
+        margin: 0;
+        padding: 0;
+        height: 300px;
+        width: 300px;
+        background: #ccc;
+
+
+    }
+</style>
+<div id="test" data-id="2">
+    <p>3</p>
+</div>
+<script>
+    var t = document.getElementById('test');
+
+    (function(o){
+        o.onmousedown = function(a){
+            var d = document;
+            if(!a){
+                a = window.event;
+            }
+            var x = a.layerX? a.layerX: a.offsetX,
+                y = a.layerY? a.layerY: a.offsetY;
+            console.log(x,y);
+            d.onmousemove = function(a){
+                if(!a){
+                    a = window.event;
+                }
+                if(!a.pageX){
+                    a.pageX = a.clientX;
+                }
+                if(!a.pageY){
+                    a.pageY = a.clientY;
+                }
+                var tx = a.pageX -x;
+                var ty = a.pageY-y;
+                o.style.left=tx + 'px';
+                o.style.top=ty + 'px';
+            };
+            d.onmouseup = function(a){
+                d.onmousemove = null;
+                d.onmouseup = null;
+            };
+        };
+    })(t);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <meta name="viewport" content="width=divice-width,initial-scale=1.0,maximum-scale=6.0, user-scalable=yes"/>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-moile-web-app-status-bar-style" content="black">
+    <script src="http://code.jquery.com/jquery-1.11.0.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.js"></script>
+    <script src="template.js"></script>
+</head>
+<body>
+<style>
+    body{
+        margin: 2px;
+    }
+    h1,h2,h3,h4,h5,h6{
+        margin: 0;
+        padding: 0;
+    }
+    header,section,footer{
+        border:1px solid #ccc;
+        overflow: hidden;
+        margin-top:-1px;
+    }
+    aside{
+        float: left;
+        width: 25%;
+    }
+    article{
+        float: left;
+        width: 75%;
+        margin-left:-1px;
+        border-left:1px solid #ccc;
+    }
+    .test-input{
+        padding:10px;
+    }
+    .cont{
+        padding: 10px;
+    }
+</style>
+<header>
+    <h1>头</h1>
+</header>
+<section>
+    <aside>
+        侧边
+    </aside>
+    <article>
+        <div class="test-input" ng-app>
+            <label>name:</label>
+            <input type="text" ng-model="youname" placeholder="输入你的名字">
+            <h2>你好,{{youname}}</h2>
+        </div>
+        <div class="cont" id="J_cont">
+
+        </div>
+    </article>
+</section>
+<footer>
+    页脚
+</footer>
+
+<script type="text/html" id="J_contTemp">
+    <% if(isAdmin){%>
+        <h1><%=title%></h1>
+        <ul>
+            <%for(i=0;i<list.length;i++){%>
+            <li>条目内容<%=i+1%>:<a href=""><%=list[i]%></a></li>
+            <%}%>
+        </ul>
+
+    <%}%>
+</script>
+<script>
+    var data={
+        title: '基本例子',
+        isAdmin: true,
+        list: ['文艺', '博客', '摄影', '电影', '民谣', '旅行', '吉他']
+    };
+    var html = template.render('J_contTemp',data);
+    $('#J_cont').append(html).delegate('li','click',function(e){
+        e.preventDefault();
+        console.log($(this).text())
+    });
+
+
+</script>
+</body>
+</html>

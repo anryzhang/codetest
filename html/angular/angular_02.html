@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+    <meta charset="utf-8"/>
+    <title></title>
+    <script src="angular.js"></script>
+</head>
+<body ng-controller="testCtrl">
+<ul>
+    <li ng-repeat="test in tests" contenteditable="true">
+        {{ test.name }}
+        <p>
+            {{test.value}}
+        </p>
+    </li>
+</ul>
+<p>{{tests.length}}</p>
+<script>
+    function testCtrl($scope){
+        $scope.tests=[
+            {
+                "name":"nexus s",
+                "value":"fast just got faster "
+            },
+            {
+                "name":"nexus 2",
+                "value":"fast 2 "
+            },
+            {
+                "name":"nex3",
+                "value":"fast 3 er "
+            }
+        ]
+    }
+</script>
+</body>
+</html>

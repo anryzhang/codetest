@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var myModule = (function(){
+        var module = {},
+            privateVariable = 'hello  word';
+        function privateMethod(){
+
+        }
+        module.publicProperty = 'foobar';
+        module.publicMethod = function(){
+            console.log(privateVariable);
+        };
+        return module;
+    })();
+    myModule.publicMethod();
+</script>
+</body>
+</html>
